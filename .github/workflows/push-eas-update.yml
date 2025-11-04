@@ -1,6 +1,8 @@
 name: Push EAS Update
 
 on:
+  push:
+    branches: [wsun/ota-update-exp-workflow]
   workflow_dispatch:
     inputs:
       channel:
