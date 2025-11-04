@@ -1,8 +1,6 @@
-name: Push EAS Update
+name: Push OTA Update (Test)
 
 on:
-  push:
-    branches: [wsun/ota-update-exp-workflow]
   workflow_dispatch:
     inputs:
       channel:
