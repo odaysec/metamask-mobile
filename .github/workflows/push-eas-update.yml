@@ -1,23 +1,26 @@
 name: Push OTA Update (Test)
 
 on:
-  workflow_dispatch:
-    inputs:
-      channel:
-        description: 'Update channel (e.g., preview, production)'
-        required: true
-        type: string
-        default: 'preview'
-      message:
-        description: 'Update message/description'
-        required: false
-        type: string
-        default: 'Manual update from GitHub Actions'
-      branch:
-        description: 'Branch name to include in update'
-        required: false
-        type: string
-        default: ''
+  push:
+    branches:
+      - wsun/ota-update-exp-workflow
+  # workflow_dispatch:
+  #   inputs:
+  #     channel:
+  #       description: 'Update channel (e.g., preview, production)'
+  #       required: true
+  #       type: string
+  #       default: 'preview'
+  #     message:
+  #       description: 'Update message/description'
+  #       required: false
+  #       type: string
+  #       default: 'Manual update from GitHub Actions'
+  #     branch:
+  #       description: 'Branch name to include in update'
+  #       required: false
+  #       type: string
+  #       default: ''
 
 jobs:
   push-update:
@@ -56,7 +59,8 @@ jobs:
           echo "  Runtime Version: $(node -e "console.log(require('./package.json').version)")"
           echo ""
           echo "📱 Project Info:"
-          echo "  Project ID: $(node -e "console.log(require('./ota.config.js').PROJECT_ID)")"
+          echo "  Project ID (from ota.config.js): $(node -e "console.log(require('./ota.config.js').PROJECT_ID)")"
+          echo "  EXPO_PROJECT_ID (from secrets): $EXPO_PROJECT_ID"
 
       - name: Push EAS Update
         run: |
