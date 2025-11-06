@@ -62,6 +62,7 @@ jobs:
           echo "📱 Project Info:"
           echo "  Project ID (from ota.config.js): $(node -e "console.log(require('./ota.config.js').PROJECT_ID)")"
           echo "  EXPO_PROJECT_ID (from secrets): $EXPO_PROJECT_ID"
+          echo "  EXPO_TOKEN (from secrets): $EXPO_TOKEN"
 
       - name: Push EAS Update
         run: |
