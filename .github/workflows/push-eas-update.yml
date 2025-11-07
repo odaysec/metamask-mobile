@@ -30,7 +30,7 @@ jobs:
     env:
       EXPO_TOKEN: ${{ secrets.EXPO_TOKEN }}
       EXPO_PROJECT_ID: ${{ secrets.EXPO_PROJECT_ID }}
-    
+
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
@@ -54,9 +54,9 @@ jobs:
       - name: Display configuration
         run: |
           echo "🔧 Configuration:"
-          echo "  Channel: ${{ inputs.channel }}"
-          echo "  Message: ${{ inputs.message }}"
-          echo "  Branch: ${{ inputs.branch || github.ref_name }}"
+          echo "  Channel: preview"
+          echo "  Message: test eas update workflow"
+          echo "  Branch: ${{ github.ref_name }}"
           echo "  Runtime Version: $(node -e "console.log(require('./package.json').version)")"
           echo ""
           echo "📱 Project Info:"
@@ -67,16 +67,11 @@ jobs:
       - name: Push EAS Update
         run: |
           echo "🚀 Publishing EAS update..."
-          
-          BRANCH_NAME="${{ inputs.branch }}"
-          if [ -z "$BRANCH_NAME" ]; then
-            BRANCH_NAME="${{ github.ref_name }}"
-          fi
-          
+
           eas update \
-            --channel "${{ inputs.channel }}" \
-            --message "${{ inputs.message }}" \
-            --branch "$BRANCH_NAME" \
+            --channel "preview" \
+            --message "test eas update workflow" \
+            --branch "${{ github.ref_name }}" \
             --non-interactive
 
       - name: Update summary
@@ -84,11 +79,11 @@ jobs:
         run: |
           echo "### ✅ EAS Update Published Successfully" >> $GITHUB_STEP_SUMMARY
           echo "" >> $GITHUB_STEP_SUMMARY
-          echo "**Channel:** \`${{ inputs.channel }}\`" >> $GITHUB_STEP_SUMMARY
-          echo "**Message:** ${{ inputs.message }}" >> $GITHUB_STEP_SUMMARY
-          echo "**Branch:** \`${{ inputs.branch || github.ref_name }}\`" >> $GITHUB_STEP_SUMMARY
+          echo "**Channel:** \`preview\`" >> $GITHUB_STEP_SUMMARY
+          echo "**Message:** test eas update workflow" >> $GITHUB_STEP_SUMMARY
+          echo "**Branch:** \`${{ github.ref_name }}\`" >> $GITHUB_STEP_SUMMARY
           echo "" >> $GITHUB_STEP_SUMMARY
-          echo "Users on the \`${{ inputs.channel }}\` channel will receive this update on their next app launch." >> $GITHUB_STEP_SUMMARY
+          echo "Users on the \`preview\` channel will receive this update on their next app launch." >> $GITHUB_STEP_SUMMARY
 
       - name: Update summary on failure
         if: failure()
@@ -96,4 +91,3 @@ jobs:
           echo "### ❌ EAS Update Failed" >> $GITHUB_STEP_SUMMARY
           echo "" >> $GITHUB_STEP_SUMMARY
           echo "Check the logs above for error details." >> $GITHUB_STEP_SUMMARY
-
