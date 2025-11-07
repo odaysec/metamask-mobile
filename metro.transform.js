@@ -122,7 +122,8 @@ module.exports.transform = async ({ src, filename, options }) => {
       active: getBuildTypeFeatures(),
     });
 
-    if (didModify) {
+    // Skip linting in CI if SKIP_TRANSFORM_LINT is set (linting done separately)
+    if (didModify && process.env.SKIP_TRANSFORM_LINT !== 'true') {
       await lintTransformedFile(getESLintInstance(), filename, processedSource);
     }
     return defaultTransformer.transform({

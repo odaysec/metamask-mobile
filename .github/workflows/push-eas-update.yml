@@ -64,6 +64,9 @@ jobs:
           echo "  EXPO_TOKEN (from secrets): $EXPO_TOKEN"
 
       - name: Push EAS Update
+        env:
+          # Skip linting during Metro transform in CI (linting already done separately)
+          SKIP_TRANSFORM_LINT: 'true'
         run: |
           echo "🚀 Publishing EAS update..."
 
