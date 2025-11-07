@@ -41,10 +41,15 @@ jobs:
           node-version: '20'
           cache: 'yarn'
 
+      - name: Install dependencies
+        run: |
+          echo "📦 Installing dependencies..."
+          yarn install --immutable
+
       - name: Setup project
         run: |
           echo "🔧 Running setup for GitHub CI..."
-          yarn setup
+          yarn setup:github-ci
 
       - name: Install EAS CLI
         run: |
