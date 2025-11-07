@@ -68,6 +68,7 @@ jobs:
           echo "🚀 Publishing EAS update..."
 
           eas update \
+            --platform ios \
             --channel "preview" \
             --message "test eas update workflow" \
             --non-interactive
