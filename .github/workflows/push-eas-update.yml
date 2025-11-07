@@ -56,7 +56,6 @@ jobs:
           echo "🔧 Configuration:"
           echo "  Channel: preview"
           echo "  Message: test eas update workflow"
-          echo "  Branch: ${{ github.ref_name }}"
           echo "  Runtime Version: $(node -e "console.log(require('./package.json').version)")"
           echo ""
           echo "📱 Project Info:"
@@ -71,7 +70,6 @@ jobs:
           eas update \
             --channel "preview" \
             --message "test eas update workflow" \
-            --branch "${{ github.ref_name }}" \
             --non-interactive
 
       - name: Update summary
@@ -81,7 +79,6 @@ jobs:
           echo "" >> $GITHUB_STEP_SUMMARY
           echo "**Channel:** \`preview\`" >> $GITHUB_STEP_SUMMARY
           echo "**Message:** test eas update workflow" >> $GITHUB_STEP_SUMMARY
-          echo "**Branch:** \`${{ github.ref_name }}\`" >> $GITHUB_STEP_SUMMARY
           echo "" >> $GITHUB_STEP_SUMMARY
           echo "Users on the \`preview\` channel will receive this update on their next app launch." >> $GITHUB_STEP_SUMMARY
 
