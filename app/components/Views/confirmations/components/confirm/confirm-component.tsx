@@ -31,10 +31,12 @@ import { TransactionType } from '@metamask/transaction-controller';
 import { useParams } from '../../../../../util/navigation/navUtils';
 import AnimatedSpinner, { SpinnerSize } from '../../../../UI/AnimatedSpinner';
 import { CustomAmountInfoSkeleton } from '../info/custom-amount-info';
+import { PredictClaimInfoSkeleton } from '../info/predict-claim-info';
 
 export enum ConfirmationLoader {
   Default = 'default',
   CustomAmount = 'customAmount',
+  PredictClaim = 'predictClaim',
 }
 
 export interface ConfirmationParams {
@@ -166,6 +168,19 @@ function Loader() {
           contentContainerStyle={styles.scrollViewContent}
         >
           <CustomAmountInfoSkeleton />
+        </ScrollView>
+      </View>
+    );
+  }
+
+  if (loader === ConfirmationLoader.PredictClaim) {
+    return (
+      <View style={styles.flatContainer} testID="confirm-loader-custom-amount">
+        <ScrollView
+          style={styles.scrollView}
+          contentContainerStyle={styles.scrollViewContent}
+        >
+          <PredictClaimInfoSkeleton />
         </ScrollView>
       </View>
     );
