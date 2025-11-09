@@ -162,7 +162,7 @@ function Loader() {
 
   if (loader === ConfirmationLoader.CustomAmount) {
     return (
-      <InfoLoader>
+      <InfoLoader testId="confirm-loader-custom-amount">
         <CustomAmountInfoSkeleton />
       </InfoLoader>
     );
@@ -170,7 +170,7 @@ function Loader() {
 
   if (loader === ConfirmationLoader.PredictClaim) {
     return (
-      <InfoLoader>
+      <InfoLoader testId="confirm-loader-predict-claim">
         <PredictClaimInfoSkeleton />
       </InfoLoader>
     );
@@ -183,11 +183,17 @@ function Loader() {
   );
 }
 
-function InfoLoader({ children }: { children: ReactNode }) {
+function InfoLoader({
+  children,
+  testId,
+}: {
+  children: ReactNode;
+  testId?: string;
+}) {
   const { styles } = useStyles(styleSheet, { isFullScreenConfirmation: true });
 
   return (
-    <View style={styles.flatContainer} testID="confirm-loader-custom-amount">
+    <View style={styles.flatContainer} testID={testId}>
       <ScrollView
         style={styles.scrollView}
         contentContainerStyle={styles.scrollViewContent}
