@@ -13,6 +13,7 @@ import { useStyles } from '../../../../../../component-library/hooks';
 import Tooltip from '../Tooltip/Tooltip';
 import styleSheet from './info-row.styles';
 import CopyIcon from './copy-icon/copy-icon';
+import { Skeleton } from '../../../../../../component-library/components/Skeleton';
 
 export enum InfoRowVariant {
   Default = 'default',
@@ -75,7 +76,7 @@ const InfoRow = ({
         style={{ ...styles.container, ...style }}
         testID={testID ?? 'info-row'}
       >
-        {hasLabel && (
+        {Boolean(label) && (
           <View style={styles.labelContainer}>
             <Text variant={labelVariant} color={variant}>
               {label}
@@ -118,5 +119,16 @@ const InfoRow = ({
     </>
   );
 };
+
+export function InfoRowSkeleton({ testId }: { testId?: string }) {
+  return (
+    <InfoRow
+      testID={testId}
+      labelChildren={<Skeleton width={100} height={14} />}
+    >
+      <Skeleton width={80} height={14} />
+    </InfoRow>
+  );
+}
 
 export default InfoRow;

@@ -24,8 +24,8 @@ export function SkeletonRow({ testId }: SkeletonRowProps) {
       style={styles.container}
       testID={testId}
     >
-      <Skeleton width={150} height={22} style={styles.skeleton} />
-      <Skeleton width={100} height={22} style={styles.skeleton} />
+      <Skeleton width={150} height={15} style={styles.skeleton} />
+      <Skeleton width={80} height={15} style={styles.skeleton} />
     </Box>
   );
 }

@@ -5,7 +5,6 @@ import Text, {
   TextColor,
   TextVariant,
 } from '../../../../../../component-library/components/Texts/Text';
-import { SkeletonRow } from '../skeleton-row';
 import {
   useIsTransactionPayLoading,
   useTransactionPayQuotes,
@@ -13,7 +12,7 @@ import {
 } from '../../../hooks/pay/useTransactionPayData';
 import { useTransactionPayToken } from '../../../hooks/pay/useTransactionPayToken';
 import { useTransactionMetadataRequest } from '../../../hooks/transactions/useTransactionMetadataRequest';
-import { InfoRowVariant } from '../../UI/info-row/info-row';
+import { InfoRowSkeleton, InfoRowVariant } from '../../UI/info-row/info-row';
 
 const SAME_CHAIN_DURATION_SECONDS = 2;
 
@@ -31,7 +30,7 @@ export function BridgeTimeRow() {
   }
 
   if (isLoading) {
-    return <SkeletonRow testId="bridge-time-row-skeleton" />;
+    return <InfoRowSkeleton testId="bridge-time-row-skeleton" />;
   }
 
   const isSameChain = payToken?.chainId === chainId;

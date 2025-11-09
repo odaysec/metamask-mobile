@@ -9,6 +9,10 @@ const styleSheet = (_params: { theme: Theme }) =>
       justifyContent: 'space-between',
       paddingBottom: 22,
     },
+
+    rows: {
+      top: '60%',
+    },
   });
 
 export default styleSheet;

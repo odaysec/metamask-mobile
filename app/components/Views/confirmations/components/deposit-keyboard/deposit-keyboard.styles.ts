@@ -30,7 +30,7 @@ const styleSheet = (params: { theme: Theme }) =>
 
     skeletonButton: {
       width: '100%',
-      height: 40,
+      height: 48,
       borderRadius: 10,
       flex: 1,
     },

@@ -12,7 +12,6 @@ import {
 } from '@metamask/transaction-controller';
 import { Box } from '../../../../../UI/Box/Box';
 import { FlexDirection, JustifyContent } from '../../../../../UI/Box/box.types';
-import { SkeletonRow } from '../skeleton-row';
 import { hasTransactionType } from '../../../utils/transaction';
 import { TransactionPayTotals } from '@metamask/transaction-pay-controller';
 import {
@@ -22,7 +21,7 @@ import {
 } from '../../../hooks/pay/useTransactionPayData';
 import { useTransactionPayFiat } from '../../../hooks/pay/useTransactionPayFiat';
 import { BigNumber } from 'bignumber.js';
-import { InfoRowVariant } from '../../UI/info-row/info-row';
+import { InfoRowSkeleton, InfoRowVariant } from '../../UI/info-row/info-row';
 
 export function BridgeFeeRow() {
   const transactionMetadata = useTransactionMetadataOrThrow();
@@ -49,8 +48,8 @@ export function BridgeFeeRow() {
   if (isLoading) {
     return (
       <>
-        <SkeletonRow testId="bridge-fee-row-skeleton" />
-        <SkeletonRow testId="metamask-fee-row-skeleton" />
+        <InfoRowSkeleton testId="bridge-fee-row-skeleton" />
+        <InfoRowSkeleton testId="metamask-fee-row-skeleton" />
       </>
     );
   }

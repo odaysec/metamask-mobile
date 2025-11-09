@@ -15,15 +15,7 @@ const styleSheet = (_params: { theme: Theme }) =>
     },
 
     skeleton: {
-      alignItems: 'center',
-      alignSelf: 'center',
-      borderRadius: 99,
-      display: 'flex',
-      flexDirection: 'row',
-      gap: 4,
-      paddingInline: 16,
-      paddingVertical: 6,
-      marginBottom: 64,
+      paddingTop: 6,
     },
   });
 

@@ -4,8 +4,7 @@ import { Theme } from '../../../../../../util/theme/models';
 const styleSheet = (_params: { theme: Theme }) =>
   StyleSheet.create({
     container: {
-      minHeight: 46,
-      paddingBottom: 8,
+      marginBottom: 14,
     },
 
     skeleton: {

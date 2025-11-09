@@ -74,8 +74,8 @@ export function PayTokenAmount({ amountHuman }: PayTokenAmountProps) {
 export function PayTokenAmountSkeleton() {
   const { styles } = useStyles(styleSheet, {});
   return (
-    <View testID="pay-token-amount-skeleton">
-      <Skeleton height={30} width={90} style={styles.skeleton} />
+    <View testID="pay-token-amount-skeleton" style={styles.skeleton}>
+      <Skeleton height={25} width={90} style={styles.container} />
     </View>
   );
 }

@@ -6,7 +6,6 @@ import React, {
   useState,
 } from 'react';
 import { PayTokenAmount, PayTokenAmountSkeleton } from '../../pay-token-amount';
-import InfoSection from '../../UI/info-row/info-section';
 import { PayWithRow, PayWithRowSkeleton } from '../../rows/pay-with-row';
 import { BridgeFeeRow } from '../../rows/bridge-fee-row';
 import { BridgeTimeRow } from '../../rows/bridge-time-row';
@@ -107,15 +106,15 @@ export const CustomAmountInfo: React.FC<CustomAmountInfoProps> = memo(
           )}
           {disablePay !== true && <PayWithRow />}
           {isKeyboardVisible && <AlertMessage alertMessage={alertMessage} />}
-        </Box>
-        <>
           {isResultReady && (
-            <Box>
+            <Box style={styles.rows}>
               <BridgeFeeRow />
               <BridgeTimeRow />
               <TotalRow />
             </Box>
           )}
+        </Box>
+        <>
           {isKeyboardVisible && (
             <DepositKeyboard
               alertMessage={keyboardAlertMessage}
@@ -140,9 +139,7 @@ export function CustomAmountInfoSkeleton() {
       <Box>
         <CustomAmountSkeleton />
         <PayTokenAmountSkeleton />
-        <InfoSection>
-          <PayWithRowSkeleton />
-        </InfoSection>
+        <PayWithRowSkeleton />
       </Box>
       <DepositKeyboardSkeleton />
     </Box>
