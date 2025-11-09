@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React, { ReactNode, useEffect } from 'react';
 import {
   BackHandler,
   StyleSheet,
@@ -162,33 +162,38 @@ function Loader() {
 
   if (loader === ConfirmationLoader.CustomAmount) {
     return (
-      <View style={styles.flatContainer} testID="confirm-loader-custom-amount">
-        <ScrollView
-          style={styles.scrollView}
-          contentContainerStyle={styles.scrollViewContent}
-        >
-          <CustomAmountInfoSkeleton />
-        </ScrollView>
-      </View>
+      <InfoLoader>
+        <CustomAmountInfoSkeleton />
+      </InfoLoader>
     );
   }
 
   if (loader === ConfirmationLoader.PredictClaim) {
     return (
-      <View style={styles.flatContainer} testID="confirm-loader-custom-amount">
-        <ScrollView
-          style={styles.scrollView}
-          contentContainerStyle={styles.scrollViewContent}
-        >
-          <PredictClaimInfoSkeleton />
-        </ScrollView>
-      </View>
+      <InfoLoader>
+        <PredictClaimInfoSkeleton />
+      </InfoLoader>
     );
   }
 
   return (
     <View style={styles.spinnerContainer} testID="confirm-loader-default">
       <AnimatedSpinner size={SpinnerSize.MD} />
+    </View>
+  );
+}
+
+function InfoLoader({ children }: { children: ReactNode }) {
+  const { styles } = useStyles(styleSheet, { isFullScreenConfirmation: true });
+
+  return (
+    <View style={styles.flatContainer} testID="confirm-loader-custom-amount">
+      <ScrollView
+        style={styles.scrollView}
+        contentContainerStyle={styles.scrollViewContent}
+      >
+        {children}
+      </ScrollView>
     </View>
   );
 }
