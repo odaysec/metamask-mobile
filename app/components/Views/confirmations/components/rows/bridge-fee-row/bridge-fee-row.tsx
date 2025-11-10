@@ -22,6 +22,9 @@ import {
 import { useTransactionPayFiat } from '../../../hooks/pay/useTransactionPayFiat';
 import { BigNumber } from 'bignumber.js';
 import { InfoRowSkeleton, InfoRowVariant } from '../../UI/info-row/info-row';
+import AlertRow from '../../UI/info-row/alert-row';
+import { RowAlertKey } from '../../UI/info-row/alert-row/constants';
+import { useAlerts } from '../../../context/alert-system-context';
 
 export function BridgeFeeRow() {
   const transactionMetadata = useTransactionMetadataOrThrow();
@@ -29,6 +32,8 @@ export function BridgeFeeRow() {
   const isLoading = useIsTransactionPayLoading();
   const quotes = useTransactionPayQuotes();
   const totals = useTransactionPayTotals();
+  const { fieldAlerts } = useAlerts();
+  const hasAlert = fieldAlerts.some((a) => a.field === RowAlertKey.PayWithFee);
 
   const feeTotalUsd = useMemo(() => {
     if (!totals?.fees) return '';
@@ -58,8 +63,9 @@ export function BridgeFeeRow() {
 
   return (
     <>
-      <InfoRow
+      <AlertRow
         testID="bridge-fee-row"
+        alertField={RowAlertKey.PayWithFee}
         label={strings('confirm.label.transaction_fee')}
         tooltip={
           hasQuotes && totals ? (
@@ -69,10 +75,13 @@ export function BridgeFeeRow() {
         tooltipTitle={strings('confirm.tooltip.title.transaction_fee')}
         rowVariant={InfoRowVariant.Small}
       >
-        <Text variant={TextVariant.BodySM} color={TextColor.Alternative}>
+        <Text
+          variant={TextVariant.BodySM}
+          color={hasAlert ? TextColor.Error : TextColor.Alternative}
+        >
           {feeTotalUsd}
         </Text>
-      </InfoRow>
+      </AlertRow>
       {hasQuotes && (
         <InfoRow
           testID="metamask-fee-row"

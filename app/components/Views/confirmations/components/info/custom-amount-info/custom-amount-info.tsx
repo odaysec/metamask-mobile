@@ -1,10 +1,4 @@
-import React, {
-  ReactNode,
-  memo,
-  useCallback,
-  useEffect,
-  useState,
-} from 'react';
+import React, { ReactNode, memo, useCallback, useState } from 'react';
 import { PayTokenAmount, PayTokenAmountSkeleton } from '../../pay-token-amount';
 import { PayWithRow, PayWithRowSkeleton } from '../../rows/pay-with-row';
 import { BridgeFeeRow } from '../../rows/bridge-fee-row';
@@ -19,10 +13,8 @@ import { useStyles } from '../../../../../hooks/useStyles';
 import styleSheet from './custom-amount-info.styles';
 import { useTransactionCustomAmount } from '../../../hooks/transactions/useTransactionCustomAmount';
 import { useTransactionCustomAmountAlerts } from '../../../hooks/transactions/useTransactionCustomAmountAlerts';
-import AlertBanner from '../../alert-banner';
 import useClearConfirmationOnBackSwipe from '../../../hooks/ui/useClearConfirmationOnBackSwipe';
 import { useAutomaticTransactionPayToken } from '../../../hooks/pay/useAutomaticTransactionPayToken';
-import { useConfirmationContext } from '../../../context/confirmation-context';
 import { AlertMessage } from '../../alerts/alert-message';
 import {
   CustomAmount,
@@ -34,6 +26,13 @@ import {
   useTransactionPaySourceAmounts,
 } from '../../../hooks/pay/useTransactionPayData';
 import { useTransactionPayMetrics } from '../../../hooks/pay/useTransactionPayMetrics';
+import Button, {
+  ButtonVariants,
+  ButtonWidthTypes,
+} from '../../../../../../component-library/components/Buttons/Button';
+import { strings } from '../../../../../../../locales/i18n';
+import { useAlerts } from '../../../context/alert-system-context';
+import { useTransactionConfirm } from '../../../hooks/transactions/useTransactionConfirm';
 
 export interface CustomAmountInfoProps {
   children?: ReactNode;
@@ -49,7 +48,6 @@ export const CustomAmountInfo: React.FC<CustomAmountInfoProps> = memo(
 
     const { styles } = useStyles(styleSheet, {});
     const [isKeyboardVisible, setKeyboardVisible] = useState(true);
-    const { setIsFooterVisible } = useConfirmationContext();
 
     const isResultReady = useIsResultReady({
       isKeyboardVisible,
@@ -66,15 +64,10 @@ export const CustomAmountInfo: React.FC<CustomAmountInfoProps> = memo(
       updateTokenAmount,
     } = useTransactionCustomAmount({ currency });
 
-    const { alertMessage, keyboardAlertMessage, excludeBannerKeys } =
-      useTransactionCustomAmountAlerts({
-        isInputChanged,
-        pendingTokenAmount: amountHumanDebounced,
-      });
-
-    useEffect(() => {
-      setIsFooterVisible(!isKeyboardVisible);
-    }, [isKeyboardVisible, setIsFooterVisible]);
+    const { alertMessage, alertTitle } = useTransactionCustomAmountAlerts({
+      isInputChanged,
+      pendingTokenAmount: amountHumanDebounced,
+    });
 
     const handleDone = useCallback(async () => {
       await updateTokenAmount();
@@ -91,33 +84,25 @@ export const CustomAmountInfo: React.FC<CustomAmountInfoProps> = memo(
           <CustomAmount
             amountFiat={amountFiat}
             currency={currency}
-            hasAlert={Boolean(keyboardAlertMessage)}
+            hasAlert={Boolean(alertMessage)}
             onPress={handleAmountPress}
           />
           {disablePay !== true && <PayTokenAmount amountHuman={amountHuman} />}
           {children}
-          {!isKeyboardVisible && (
-            <AlertBanner
-              blockingOnly
-              excludeKeys={excludeBannerKeys}
-              includeFields
-              inline
-            />
-          )}
           {disablePay !== true && <PayWithRow />}
-          {isKeyboardVisible && <AlertMessage alertMessage={alertMessage} />}
+        </Box>
+        <Box gap={25}>
+          <AlertMessage alertMessage={alertMessage} />
           {isResultReady && (
-            <Box style={styles.rows}>
+            <Box>
               <BridgeFeeRow />
               <BridgeTimeRow />
               <TotalRow />
             </Box>
           )}
-        </Box>
-        <>
           {isKeyboardVisible && (
             <DepositKeyboard
-              alertMessage={keyboardAlertMessage}
+              alertMessage={alertTitle}
               value={amountFiat}
               onChange={updatePendingAmount}
               onDonePress={handleDone}
@@ -125,7 +110,8 @@ export const CustomAmountInfo: React.FC<CustomAmountInfoProps> = memo(
               hasInput={hasInput}
             />
           )}
-        </>
+          {!isKeyboardVisible && <ConfirmButton alertTitle={alertTitle} />}
+        </Box>
       </Box>
     );
   },
@@ -143,6 +129,25 @@ export function CustomAmountInfoSkeleton() {
       </Box>
       <DepositKeyboardSkeleton />
     </Box>
+  );
+}
+
+function ConfirmButton({ alertTitle }: { alertTitle: string | undefined }) {
+  const { styles } = useStyles(styleSheet, {});
+  const { hasBlockingAlerts } = useAlerts();
+  const isLoading = useIsTransactionPayLoading();
+  const { onConfirm } = useTransactionConfirm();
+  const disabled = hasBlockingAlerts || isLoading;
+
+  return (
+    <Button
+      style={[disabled && styles.disabledButton]}
+      label={alertTitle ?? strings('confirm.deposit_edit_amount_done')}
+      variant={ButtonVariants.Primary}
+      width={ButtonWidthTypes.Full}
+      disabled={disabled}
+      onPress={onConfirm}
+    />
   );
 }
 

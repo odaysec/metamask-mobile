@@ -10,8 +10,8 @@ const styleSheet = (_params: { theme: Theme }) =>
       paddingBottom: 22,
     },
 
-    rows: {
-      top: '60%',
+    disabledButton: {
+      opacity: 0.5,
     },
   });
 
