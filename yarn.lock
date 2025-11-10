@@ -7065,7 +7065,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@metamask/bridge-controller@npm:^56.0.3":
+"@metamask/bridge-controller@npm:56.0.3":
   version: 56.0.3
   resolution: "@metamask/bridge-controller@npm:56.0.3"
   dependencies:
@@ -7097,7 +7097,39 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@metamask/bridge-status-controller@npm:^56.0.0":
+"@metamask/bridge-controller@patch:@metamask/bridge-controller@npm%3A56.0.3#~/.yarn/patches/@metamask-bridge-controller-npm-56.0.3-5cb84c5c94.patch":
+  version: 56.0.3
+  resolution: "@metamask/bridge-controller@patch:@metamask/bridge-controller@npm%3A56.0.3#~/.yarn/patches/@metamask-bridge-controller-npm-56.0.3-5cb84c5c94.patch::version=56.0.3&hash=2f6d7d"
+  dependencies:
+    "@ethersproject/address": "npm:^5.7.0"
+    "@ethersproject/bignumber": "npm:^5.7.0"
+    "@ethersproject/constants": "npm:^5.7.0"
+    "@ethersproject/contracts": "npm:^5.7.0"
+    "@ethersproject/providers": "npm:^5.7.0"
+    "@metamask/base-controller": "npm:^9.0.0"
+    "@metamask/controller-utils": "npm:^11.14.1"
+    "@metamask/gas-fee-controller": "npm:^25.0.0"
+    "@metamask/keyring-api": "npm:^21.0.0"
+    "@metamask/messenger": "npm:^0.3.0"
+    "@metamask/metamask-eth-abis": "npm:^3.1.1"
+    "@metamask/multichain-network-controller": "npm:^2.0.0"
+    "@metamask/polling-controller": "npm:^15.0.0"
+    "@metamask/utils": "npm:^11.8.1"
+    bignumber.js: "npm:^9.1.2"
+    reselect: "npm:^5.1.1"
+    uuid: "npm:^8.3.2"
+  peerDependencies:
+    "@metamask/accounts-controller": ^34.0.0
+    "@metamask/assets-controllers": ^84.0.0
+    "@metamask/network-controller": ^25.0.0
+    "@metamask/remote-feature-flag-controller": ^2.0.0
+    "@metamask/snaps-controllers": ^14.0.0
+    "@metamask/transaction-controller": ^61.0.0
+  checksum: 10/76272ddda404a1ef6023badbc6b6647ca2559dd43865934bd7bf1f06c3be2f8e0df93ed1ba55aa898f2a6ab547f3efdd5771cf8cf136b35051a2e33fe9a4010e
+  languageName: node
+  linkType: hard
+
+"@metamask/bridge-status-controller@npm:56.0.0":
   version: 56.0.0
   resolution: "@metamask/bridge-status-controller@npm:56.0.0"
   dependencies:
@@ -7116,6 +7148,28 @@ __metadata:
     "@metamask/snaps-controllers": ^14.0.0
     "@metamask/transaction-controller": ^61.0.0
   checksum: 10/2767945645a935d9906777ff50a47688295b2a22413696e66a7b021374a8a738fea211d932d0d60ece31d4b38153bb52f895c0046963658dde0134ed9f6f67ae
+  languageName: node
+  linkType: hard
+
+"@metamask/bridge-status-controller@patch:@metamask/bridge-status-controller@npm%3A56.0.0#~/.yarn/patches/@metamask-bridge-status-controller-npm-56.0.0-c6e652e240.patch":
+  version: 56.0.0
+  resolution: "@metamask/bridge-status-controller@patch:@metamask/bridge-status-controller@npm%3A56.0.0#~/.yarn/patches/@metamask-bridge-status-controller-npm-56.0.0-c6e652e240.patch::version=56.0.0&hash=1087a8"
+  dependencies:
+    "@metamask/base-controller": "npm:^9.0.0"
+    "@metamask/controller-utils": "npm:^11.14.1"
+    "@metamask/polling-controller": "npm:^15.0.0"
+    "@metamask/superstruct": "npm:^3.1.0"
+    "@metamask/utils": "npm:^11.8.1"
+    bignumber.js: "npm:^9.1.2"
+    uuid: "npm:^8.3.2"
+  peerDependencies:
+    "@metamask/accounts-controller": ^34.0.0
+    "@metamask/bridge-controller": ^56.0.0
+    "@metamask/gas-fee-controller": ^25.0.0
+    "@metamask/network-controller": ^25.0.0
+    "@metamask/snaps-controllers": ^14.0.0
+    "@metamask/transaction-controller": ^61.0.0
+  checksum: 10/d6a7024e0e449740a80a422658fba5f9694bfc7230d7c1d1740a27c9c844d452222258c15b360a3750755f7454e69844b1e677ad57156f6cdbdd814d46c76be4
   languageName: node
   linkType: hard
 
@@ -8561,7 +8615,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@metamask/smart-transactions-controller@npm:^20.1.0":
+"@metamask/smart-transactions-controller@npm:20.1.0":
   version: 20.1.0
   resolution: "@metamask/smart-transactions-controller@npm:20.1.0"
   dependencies:
@@ -8595,6 +8649,43 @@ __metadata:
     "@metamask/remote-feature-flag-controller":
       optional: true
   checksum: 10/c9072b44cf059c09b3c1c95814cfe1aea0f8c73c490e4a304b0516b6b2d1bdafc06f7cf328c038c121c968b62eb8472a79623736a4750bbf564b58bbf3c52338
+  languageName: node
+  linkType: hard
+
+"@metamask/smart-transactions-controller@patch:@metamask/smart-transactions-controller@npm%3A20.1.0#~/.yarn/patches/@metamask-smart-transactions-controller-npm-20.1.0-93cf6361d0.patch":
+  version: 20.1.0
+  resolution: "@metamask/smart-transactions-controller@patch:@metamask/smart-transactions-controller@npm%3A20.1.0#~/.yarn/patches/@metamask-smart-transactions-controller-npm-20.1.0-93cf6361d0.patch::version=20.1.0&hash=6987b7"
+  dependencies:
+    "@babel/runtime": "npm:^7.24.1"
+    "@ethereumjs/tx": "npm:^5.2.1"
+    "@ethereumjs/util": "npm:^9.0.2"
+    "@ethersproject/bytes": "npm:^5.7.0"
+    "@ethersproject/keccak256": "npm:^5.8.0"
+    "@ethersproject/transactions": "npm:^5.7.0"
+    "@metamask/base-controller": "npm:^9.0.0"
+    "@metamask/controller-utils": "npm:^11.0.0"
+    "@metamask/eth-json-rpc-provider": "npm:^4.1.6"
+    "@metamask/eth-query": "npm:^4.0.0"
+    "@metamask/messenger": "npm:^0.3.0"
+    "@metamask/polling-controller": "npm:^15.0.0"
+    bignumber.js: "npm:^9.0.1"
+    fast-json-patch: "npm:^3.1.0"
+    lodash: "npm:^4.17.21"
+  peerDependencies:
+    "@metamask/network-controller": ^25.0.0
+    "@metamask/transaction-controller": ^61.0.0
+  peerDependenciesMeta:
+    "@metamask/accounts-controller":
+      optional: true
+    "@metamask/approval-controller":
+      optional: true
+    "@metamask/eth-block-tracker":
+      optional: true
+    "@metamask/gas-fee-controller":
+      optional: true
+    "@metamask/remote-feature-flag-controller":
+      optional: true
+  checksum: 10/c48958d03be00e9f85bde9db0f0bdfdb12530d0ecdf3e6f94fbefab91e26fa5dd05b3fb4416cf38b984905c240032bededaf55f49b4746ed74d146c0b7a22fae
   languageName: node
   linkType: hard
 
@@ -8858,7 +8949,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@metamask/transaction-controller@npm:61.1.0, @metamask/transaction-controller@npm:^61.0.0":
+"@metamask/transaction-controller@npm:61.1.0":
   version: 61.1.0
   resolution: "@metamask/transaction-controller@npm:61.1.0"
   dependencies:
@@ -8895,9 +8986,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@metamask/transaction-controller@patch:@metamask/transaction-controller@npm%3A61.1.0#~/.yarn/patches/@metamask-transaction-controller-npm-61.0.0-cccac388c7.patch":
+"@metamask/transaction-controller@patch:@metamask/transaction-controller@npm%3A61.1.0#~/.yarn/patches/@metamask-transaction-controller-npm-61.1.0-515870eeb9.patch":
   version: 61.1.0
-  resolution: "@metamask/transaction-controller@patch:@metamask/transaction-controller@npm%3A61.1.0#~/.yarn/patches/@metamask-transaction-controller-npm-61.0.0-cccac388c7.patch::version=61.1.0&hash=1a3342"
+  resolution: "@metamask/transaction-controller@patch:@metamask/transaction-controller@npm%3A61.1.0#~/.yarn/patches/@metamask-transaction-controller-npm-61.1.0-515870eeb9.patch::version=61.1.0&hash=7bf482"
   dependencies:
     "@ethereumjs/common": "npm:^4.4.0"
     "@ethereumjs/tx": "npm:^5.4.0"
@@ -8928,7 +9019,7 @@ __metadata:
     "@metamask/gas-fee-controller": ^25.0.0
     "@metamask/network-controller": ^25.0.0
     "@metamask/remote-feature-flag-controller": ^2.0.0
-  checksum: 10/a39ee64664eeb0591d52ff8d2e353bcaadc152e4bda919ad920a3550957f5d295454d19c9de6914acd4e1c9de0e53330c1efc2e6eaafdd3994c1dcba0ace4d98
+  checksum: 10/b59634c52a3308a924bc7284fe2f4ffd5381e3138f4949ff31b95f6abdccf6242b2d0c8e58b0d0a2a58de1bf00146ec7c73bd9d1dd37867d4fec26a4827dd772
   languageName: node
   linkType: hard
 
@@ -34261,8 +34352,8 @@ __metadata:
     "@metamask/auto-changelog": "npm:^5.1.0"
     "@metamask/base-controller": "npm:^9.0.0"
     "@metamask/bitcoin-wallet-snap": "npm:^1.4.5"
-    "@metamask/bridge-controller": "npm:^56.0.3"
-    "@metamask/bridge-status-controller": "npm:^56.0.0"
+    "@metamask/bridge-controller": "patch:@metamask/bridge-controller@npm%3A56.0.3#~/.yarn/patches/@metamask-bridge-controller-npm-56.0.3-5cb84c5c94.patch"
+    "@metamask/bridge-status-controller": "patch:@metamask/bridge-status-controller@npm%3A56.0.0#~/.yarn/patches/@metamask-bridge-status-controller-npm-56.0.0-c6e652e240.patch"
     "@metamask/browser-passworder": "npm:^5.0.0"
     "@metamask/build-utils": "npm:^3.0.0"
     "@metamask/chain-agnostic-permission": "npm:^1.2.2"
@@ -34343,7 +34434,7 @@ __metadata:
     "@metamask/selected-network-controller": "npm:^25.0.0"
     "@metamask/signature-controller": "npm:^35.0.0"
     "@metamask/slip44": "npm:^4.2.0"
-    "@metamask/smart-transactions-controller": "npm:^20.1.0"
+    "@metamask/smart-transactions-controller": "patch:@metamask/smart-transactions-controller@npm%3A20.1.0#~/.yarn/patches/@metamask-smart-transactions-controller-npm-20.1.0-93cf6361d0.patch"
     "@metamask/snaps-controllers": "npm:^16.0.0"
     "@metamask/snaps-execution-environments": "npm:^10.2.2"
     "@metamask/snaps-rpc-methods": "npm:^14.0.0"
@@ -34358,7 +34449,7 @@ __metadata:
     "@metamask/test-dapp-multichain": "npm:^0.17.1"
     "@metamask/test-dapp-solana": "npm:^0.3.0"
     "@metamask/token-search-discovery-controller": "npm:^4.0.0"
-    "@metamask/transaction-controller": "patch:@metamask/transaction-controller@npm%3A61.1.0#~/.yarn/patches/@metamask-transaction-controller-npm-61.0.0-cccac388c7.patch"
+    "@metamask/transaction-controller": "patch:@metamask/transaction-controller@npm%3A61.1.0#~/.yarn/patches/@metamask-transaction-controller-npm-61.1.0-515870eeb9.patch"
     "@metamask/transaction-pay-controller": "npm:^3.1.0"
     "@metamask/tron-wallet-snap": "npm:^1.6.1"
     "@metamask/utils": "npm:^11.8.1"

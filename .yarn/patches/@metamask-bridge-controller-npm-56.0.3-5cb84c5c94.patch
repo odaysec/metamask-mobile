@@ -1,0 +1,60 @@
+diff --git a/dist/constants/bridge.cjs b/dist/constants/bridge.cjs
+index b6e24eb69f62f6a0f33d8d1c46b6fc36a6c40c7a..2d488e90cd55c8e72574ed78541a38983db3c2b7 100644
+--- a/dist/constants/bridge.cjs
++++ b/dist/constants/bridge.cjs
+@@ -19,8 +19,8 @@ exports.ALLOWED_BRIDGE_CHAIN_IDS = [
+     keyring_api_1.SolScope.Mainnet,
+     keyring_api_1.BtcScope.Mainnet,
+ ];
+-exports.BRIDGE_DEV_API_BASE_URL = 'https://bridge.dev-api.cx.metamask.io';
+-exports.BRIDGE_PROD_API_BASE_URL = 'https://bridge.api.cx.metamask.io';
++exports.BRIDGE_DEV_API_BASE_URL = 'https://bridge-664.dev-api.cx.metamask.io';
++exports.BRIDGE_PROD_API_BASE_URL = 'https://bridge-664.dev-api.cx.metamask.io';
+ var BridgeClientId;
+ (function (BridgeClientId) {
+     BridgeClientId["EXTENSION"] = "extension";
+diff --git a/dist/constants/bridge.d.cts b/dist/constants/bridge.d.cts
+index 56f3515e40721188ae62866799e5aa4ad85b0080..5bae98e8b76fef91401f6ef2982afe884780fd27 100644
+--- a/dist/constants/bridge.d.cts
++++ b/dist/constants/bridge.d.cts
+@@ -3,8 +3,8 @@ import type { Hex } from "@metamask/utils";
+ import type { BridgeControllerState, FeatureFlagsPlatformConfig } from "../types.cjs";
+ export declare const ALLOWED_BRIDGE_CHAIN_IDS: readonly ["0x1", "0x38", "0x89", "0x144", "0xa86a", "0xa", "0xa4b1", "0xe708", "0x2105", "0x531", "0x8f", SolScope.Mainnet, BtcScope.Mainnet];
+ export type AllowedBridgeChainIds = (typeof ALLOWED_BRIDGE_CHAIN_IDS)[number];
+-export declare const BRIDGE_DEV_API_BASE_URL = "https://bridge.dev-api.cx.metamask.io";
+-export declare const BRIDGE_PROD_API_BASE_URL = "https://bridge.api.cx.metamask.io";
++export declare const BRIDGE_DEV_API_BASE_URL = "https://bridge-664.dev-api.cx.metamask.io";
++export declare const BRIDGE_PROD_API_BASE_URL = "https://bridge-664.dev-api.cx.metamask.io";
+ export declare enum BridgeClientId {
+     EXTENSION = "extension",
+     MOBILE = "mobile"
+diff --git a/dist/constants/bridge.d.mts b/dist/constants/bridge.d.mts
+index ebd4a259c3dc8135113840e85561fdb0ee27128b..d4f78b922525ea23eaed0e7cb7794c6c485b297a 100644
+--- a/dist/constants/bridge.d.mts
++++ b/dist/constants/bridge.d.mts
+@@ -3,8 +3,8 @@ import type { Hex } from "@metamask/utils";
+ import type { BridgeControllerState, FeatureFlagsPlatformConfig } from "../types.mjs";
+ export declare const ALLOWED_BRIDGE_CHAIN_IDS: readonly ["0x1", "0x38", "0x89", "0x144", "0xa86a", "0xa", "0xa4b1", "0xe708", "0x2105", "0x531", "0x8f", SolScope.Mainnet, BtcScope.Mainnet];
+ export type AllowedBridgeChainIds = (typeof ALLOWED_BRIDGE_CHAIN_IDS)[number];
+-export declare const BRIDGE_DEV_API_BASE_URL = "https://bridge.dev-api.cx.metamask.io";
+-export declare const BRIDGE_PROD_API_BASE_URL = "https://bridge.api.cx.metamask.io";
++export declare const BRIDGE_DEV_API_BASE_URL = "https://bridge-664.dev-api.cx.metamask.io";
++export declare const BRIDGE_PROD_API_BASE_URL = "https://bridge-664.dev-api.cx.metamask.io";
+ export declare enum BridgeClientId {
+     EXTENSION = "extension",
+     MOBILE = "mobile"
+diff --git a/dist/constants/bridge.mjs b/dist/constants/bridge.mjs
+index e192716bab6e42fcaf33c5d3950a2a6cfd687794..3951a6a30f0e7700710b7973fe76b9acb4325e36 100644
+--- a/dist/constants/bridge.mjs
++++ b/dist/constants/bridge.mjs
+@@ -16,8 +16,8 @@ export const ALLOWED_BRIDGE_CHAIN_IDS = [
+     SolScope.Mainnet,
+     BtcScope.Mainnet,
+ ];
+-export const BRIDGE_DEV_API_BASE_URL = 'https://bridge.dev-api.cx.metamask.io';
+-export const BRIDGE_PROD_API_BASE_URL = 'https://bridge.api.cx.metamask.io';
++export const BRIDGE_DEV_API_BASE_URL = 'https://bridge-664.dev-api.cx.metamask.io';
++export const BRIDGE_PROD_API_BASE_URL = 'https://bridge-664.dev-api.cx.metamask.io';
+ export var BridgeClientId;
+ (function (BridgeClientId) {
+     BridgeClientId["EXTENSION"] = "extension";
