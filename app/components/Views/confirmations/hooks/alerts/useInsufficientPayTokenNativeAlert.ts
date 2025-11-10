@@ -54,7 +54,7 @@ export function useInsufficientPayTokenNativeAlert(): Alert[] {
       {
         key: AlertKeys.InsufficientPayTokenNative,
         field: RowAlertKey.PayWithFee,
-        title: 'Insufficient funds',
+        title: strings('alert_system.insufficient_pay_token_native.title'),
         message: strings('alert_system.insufficient_pay_token_native.message', {
           ticker,
         }),
