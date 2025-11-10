@@ -79,7 +79,7 @@ export const DepositKeyboard = memo(
         >
           {alertMessage && (
             <Button
-              testID="deposit-keyboard-done-button"
+              testID="deposit-keyboard-alert"
               label={alertMessage}
               style={[styles.button, styles.disabledButton]}
               onPress={noop}

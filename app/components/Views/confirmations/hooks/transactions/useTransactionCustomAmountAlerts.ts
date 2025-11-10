@@ -45,7 +45,7 @@ export function useTransactionCustomAmountAlerts({
     (!ON_CHANGE_ALERTS.includes(firstAlert?.key as AlertKeys) ||
       isInputChanged);
 
-  const alertTitle = hasAlert ? firstAlert?.title : undefined;
+  const alertTitle = hasAlert ? (firstAlert?.title ?? 'Error') : undefined;
   const alertMessage = hasAlert ? (firstAlert?.message as string) : undefined;
 
   return {
