@@ -1,6 +1,7 @@
 import { Image } from 'expo-image';
 import React, { memo, useEffect, useMemo, useState } from 'react';
 import { ActivityIndicator, ImageStyle, View, ViewStyle } from 'react-native';
+import { fontStyles } from '../../../../../styles/common';
 import Text, {
   TextVariant,
 } from '../../../../../component-library/components/Texts/Text';
@@ -87,7 +88,7 @@ const PerpsTokenLogo: React.FC<PerpsTokenLogoProps> = ({
   const fallbackTextStyle = useMemo(
     () => ({
       fontSize: Math.round(size * 0.4),
-      fontWeight: '600' as const,
+      ...fontStyles.medium,
       color: colors.text.default,
     }),
     [size, colors.text.default],
