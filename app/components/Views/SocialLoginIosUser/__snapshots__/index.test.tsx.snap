@@ -85,7 +85,7 @@ exports[`SocialLoginIosUser SocialLoginSuccessExistingUser renders match snapsho
         style={
           {
             "color": "#121314",
-            "fontFamily": "Geist Bold",
+            "fontFamily": "Geist-Bold",
             "fontSize": 32,
             "letterSpacing": 0,
             "lineHeight": 40,
@@ -133,7 +133,7 @@ exports[`SocialLoginIosUser SocialLoginSuccessExistingUser renders match snapsho
           style={
             {
               "color": "#ffffff",
-              "fontFamily": "Geist Medium",
+              "fontFamily": "Geist-Medium",
               "fontSize": 16,
               "letterSpacing": 0,
               "lineHeight": 24,
@@ -233,7 +233,7 @@ exports[`SocialLoginIosUser SocialLoginSuccessExistingUser renders match snapsho
         style={
           {
             "color": "#121314",
-            "fontFamily": "Geist Bold",
+            "fontFamily": "Geist-Bold",
             "fontSize": 32,
             "letterSpacing": 0,
             "lineHeight": 40,
@@ -281,7 +281,7 @@ exports[`SocialLoginIosUser SocialLoginSuccessExistingUser renders match snapsho
           style={
             {
               "color": "#ffffff",
-              "fontFamily": "Geist Medium",
+              "fontFamily": "Geist-Medium",
               "fontSize": 16,
               "letterSpacing": 0,
               "lineHeight": 24,
@@ -381,7 +381,7 @@ exports[`SocialLoginIosUser SocialLoginSuccessNewUser renders match snapshot 1`]
         style={
           {
             "color": "#121314",
-            "fontFamily": "Geist Bold",
+            "fontFamily": "Geist-Bold",
             "fontSize": 32,
             "letterSpacing": 0,
             "lineHeight": 40,
@@ -429,7 +429,7 @@ exports[`SocialLoginIosUser SocialLoginSuccessNewUser renders match snapshot 1`]
           style={
             {
               "color": "#ffffff",
-              "fontFamily": "Geist Medium",
+              "fontFamily": "Geist-Medium",
               "fontSize": 16,
               "letterSpacing": 0,
               "lineHeight": 24,
@@ -529,7 +529,7 @@ exports[`SocialLoginIosUser SocialLoginSuccessNewUser renders match snapshot wit
         style={
           {
             "color": "#121314",
-            "fontFamily": "Geist Bold",
+            "fontFamily": "Geist-Bold",
             "fontSize": 32,
             "letterSpacing": 0,
             "lineHeight": 40,
@@ -577,7 +577,7 @@ exports[`SocialLoginIosUser SocialLoginSuccessNewUser renders match snapshot wit
           style={
             {
               "color": "#ffffff",
-              "fontFamily": "Geist Medium",
+              "fontFamily": "Geist-Medium",
               "fontSize": 16,
               "letterSpacing": 0,
               "lineHeight": 24,

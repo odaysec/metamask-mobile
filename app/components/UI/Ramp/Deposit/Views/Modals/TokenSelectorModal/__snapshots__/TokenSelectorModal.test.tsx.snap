@@ -467,7 +467,7 @@ exports[`TokenSelectorModal Component displays empty state when no tokens match 
                                 style={
                                   {
                                     "color": "#121314",
-                                    "fontFamily": "Geist Bold",
+                                    "fontFamily": "Geist-Bold",
                                     "fontSize": 18,
                                     "letterSpacing": 0,
                                     "lineHeight": 24,
@@ -682,7 +682,7 @@ exports[`TokenSelectorModal Component displays empty state when no tokens match 
                                     style={
                                       {
                                         "color": "#121314",
-                                        "fontFamily": "Geist Regular",
+                                        "fontFamily": "Geist-Regular",
                                         "fontSize": 16,
                                         "letterSpacing": 0,
                                         "lineHeight": 24,
@@ -803,7 +803,7 @@ exports[`TokenSelectorModal Component displays empty state when no tokens match 
                                       "borderColor": "transparent",
                                       "borderWidth": 1,
                                       "color": "#121314",
-                                      "fontFamily": "Geist Regular",
+                                      "fontFamily": "Geist-Regular",
                                       "fontSize": 16,
                                       "height": 38,
                                       "letterSpacing": 0,
@@ -927,7 +927,7 @@ exports[`TokenSelectorModal Component displays empty state when no tokens match 
                                       style={
                                         {
                                           "color": "#121314",
-                                          "fontFamily": "Geist Medium",
+                                          "fontFamily": "Geist-Medium",
                                           "fontSize": 18,
                                           "letterSpacing": 0,
                                           "lineHeight": 24,
@@ -1423,7 +1423,7 @@ exports[`TokenSelectorModal Component displays network filter selector when pres
                                 style={
                                   {
                                     "color": "#121314",
-                                    "fontFamily": "Geist Bold",
+                                    "fontFamily": "Geist-Bold",
                                     "fontSize": 18,
                                     "letterSpacing": 0,
                                     "lineHeight": 24,
@@ -1504,7 +1504,7 @@ exports[`TokenSelectorModal Component displays network filter selector when pres
                               style={
                                 {
                                   "color": "#4459ff",
-                                  "fontFamily": "Geist Medium",
+                                  "fontFamily": "Geist-Medium",
                                   "fontSize": 16,
                                   "letterSpacing": 0,
                                   "lineHeight": 24,
@@ -1703,7 +1703,7 @@ exports[`TokenSelectorModal Component displays network filter selector when pres
                                           style={
                                             {
                                               "color": "#121314",
-                                              "fontFamily": "Geist Regular",
+                                              "fontFamily": "Geist-Regular",
                                               "fontSize": 16,
                                               "letterSpacing": 0,
                                               "lineHeight": 24,
@@ -1870,7 +1870,7 @@ exports[`TokenSelectorModal Component displays network filter selector when pres
                                           style={
                                             {
                                               "color": "#121314",
-                                              "fontFamily": "Geist Regular",
+                                              "fontFamily": "Geist-Regular",
                                               "fontSize": 16,
                                               "letterSpacing": 0,
                                               "lineHeight": 24,
@@ -2037,7 +2037,7 @@ exports[`TokenSelectorModal Component displays network filter selector when pres
                                           style={
                                             {
                                               "color": "#121314",
-                                              "fontFamily": "Geist Regular",
+                                              "fontFamily": "Geist-Regular",
                                               "fontSize": 16,
                                               "letterSpacing": 0,
                                               "lineHeight": 24,
@@ -2087,7 +2087,7 @@ exports[`TokenSelectorModal Component displays network filter selector when pres
                                 style={
                                   {
                                     "color": "#ffffff",
-                                    "fontFamily": "Geist Medium",
+                                    "fontFamily": "Geist-Medium",
                                     "fontSize": 16,
                                     "letterSpacing": 0,
                                     "lineHeight": 24,
@@ -2580,7 +2580,7 @@ exports[`TokenSelectorModal Component renders correctly and matches snapshot 1`]
                                 style={
                                   {
                                     "color": "#121314",
-                                    "fontFamily": "Geist Bold",
+                                    "fontFamily": "Geist-Bold",
                                     "fontSize": 18,
                                     "letterSpacing": 0,
                                     "lineHeight": 24,
@@ -2795,7 +2795,7 @@ exports[`TokenSelectorModal Component renders correctly and matches snapshot 1`]
                                     style={
                                       {
                                         "color": "#121314",
-                                        "fontFamily": "Geist Regular",
+                                        "fontFamily": "Geist-Regular",
                                         "fontSize": 16,
                                         "letterSpacing": 0,
                                         "lineHeight": 24,
@@ -2916,7 +2916,7 @@ exports[`TokenSelectorModal Component renders correctly and matches snapshot 1`]
                                       "borderColor": "transparent",
                                       "borderWidth": 1,
                                       "color": "#121314",
-                                      "fontFamily": "Geist Regular",
+                                      "fontFamily": "Geist-Regular",
                                       "fontSize": 16,
                                       "height": 38,
                                       "letterSpacing": 0,
@@ -3196,7 +3196,7 @@ exports[`TokenSelectorModal Component renders correctly and matches snapshot 1`]
                                           style={
                                             {
                                               "color": "#121314",
-                                              "fontFamily": "Geist Medium",
+                                              "fontFamily": "Geist-Medium",
                                               "fontSize": 18,
                                               "letterSpacing": 0,
                                               "lineHeight": 24,
@@ -3210,7 +3210,7 @@ exports[`TokenSelectorModal Component renders correctly and matches snapshot 1`]
                                           style={
                                             {
                                               "color": "#686e7d",
-                                              "fontFamily": "Geist Regular",
+                                              "fontFamily": "Geist-Regular",
                                               "fontSize": 16,
                                               "letterSpacing": 0,
                                               "lineHeight": 24,
@@ -3438,7 +3438,7 @@ exports[`TokenSelectorModal Component renders correctly and matches snapshot 1`]
                                           style={
                                             {
                                               "color": "#121314",
-                                              "fontFamily": "Geist Medium",
+                                              "fontFamily": "Geist-Medium",
                                               "fontSize": 18,
                                               "letterSpacing": 0,
                                               "lineHeight": 24,
@@ -3452,7 +3452,7 @@ exports[`TokenSelectorModal Component renders correctly and matches snapshot 1`]
                                           style={
                                             {
                                               "color": "#686e7d",
-                                              "fontFamily": "Geist Regular",
+                                              "fontFamily": "Geist-Regular",
                                               "fontSize": 16,
                                               "letterSpacing": 0,
                                               "lineHeight": 24,
@@ -3653,7 +3653,7 @@ exports[`TokenSelectorModal Component renders correctly and matches snapshot 1`]
                                           style={
                                             {
                                               "color": "#121314",
-                                              "fontFamily": "Geist Medium",
+                                              "fontFamily": "Geist-Medium",
                                               "fontSize": 18,
                                               "letterSpacing": 0,
                                               "lineHeight": 24,
@@ -3667,7 +3667,7 @@ exports[`TokenSelectorModal Component renders correctly and matches snapshot 1`]
                                           style={
                                             {
                                               "color": "#686e7d",
-                                              "fontFamily": "Geist Regular",
+                                              "fontFamily": "Geist-Regular",
                                               "fontSize": 16,
                                               "letterSpacing": 0,
                                               "lineHeight": 24,
@@ -3868,7 +3868,7 @@ exports[`TokenSelectorModal Component renders correctly and matches snapshot 1`]
                                           style={
                                             {
                                               "color": "#121314",
-                                              "fontFamily": "Geist Medium",
+                                              "fontFamily": "Geist-Medium",
                                               "fontSize": 18,
                                               "letterSpacing": 0,
                                               "lineHeight": 24,
@@ -3882,7 +3882,7 @@ exports[`TokenSelectorModal Component renders correctly and matches snapshot 1`]
                                           style={
                                             {
                                               "color": "#686e7d",
-                                              "fontFamily": "Geist Regular",
+                                              "fontFamily": "Geist-Regular",
                                               "fontSize": 16,
                                               "letterSpacing": 0,
                                               "lineHeight": 24,
@@ -4083,7 +4083,7 @@ exports[`TokenSelectorModal Component renders correctly and matches snapshot 1`]
                                           style={
                                             {
                                               "color": "#121314",
-                                              "fontFamily": "Geist Medium",
+                                              "fontFamily": "Geist-Medium",
                                               "fontSize": 18,
                                               "letterSpacing": 0,
                                               "lineHeight": 24,
@@ -4097,7 +4097,7 @@ exports[`TokenSelectorModal Component renders correctly and matches snapshot 1`]
                                           style={
                                             {
                                               "color": "#686e7d",
-                                              "fontFamily": "Geist Regular",
+                                              "fontFamily": "Geist-Regular",
                                               "fontSize": 16,
                                               "letterSpacing": 0,
                                               "lineHeight": 24,
