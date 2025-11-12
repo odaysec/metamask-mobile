@@ -936,6 +936,10 @@ export function getWalletNavbarOptions(
   shouldDisplayCardButton,
 ) {
   const innerStyles = StyleSheet.create({
+    headerContainer: {
+      height: 72,
+      alignItems: 'center',
+    },
     headerIcon: {
       color: themeColors.primary.default,
     },
@@ -1078,6 +1082,7 @@ export function getWalletNavbarOptions(
   return {
     header: () => (
       <HeaderBase
+        style={innerStyles.headerContainer}
         includesTopInset
         variant={HeaderBaseVariant.Display}
         startAccessory={
