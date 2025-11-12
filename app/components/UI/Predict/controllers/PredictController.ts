@@ -71,6 +71,7 @@ import {
 } from '../types';
 import { ensureError } from '../utils/predictErrorHandler';
 import { PREDICT_CONSTANTS, PREDICT_ERROR_CODES } from '../constants/errors';
+import { MATIC_CONTRACTS } from '../providers/polymarket/constants';
 
 /**
  * State shape for PredictController
@@ -1317,6 +1318,7 @@ export class PredictController extends BaseController<
         networkClientId,
         disableHook: true,
         disableSequential: true,
+        gasFeeToken: MATIC_CONTRACTS.collateral as Hex,
         transactions,
       });
 
@@ -1685,6 +1687,7 @@ export class PredictController extends BaseController<
         disableHook: true,
         disableSequential: true,
         requireApproval: true,
+        gasFeeToken: MATIC_CONTRACTS.collateral as Hex,
         transactions: [transaction],
       });
 
