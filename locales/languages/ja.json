@@ -542,7 +542,8 @@
     "activity": "アクティビティ",
     "trade": "取引",
     "settings": "設定",
-    "rewards": "報酬"
+    "rewards": "報酬",
+    "trending": "Trending"
   },
   "drawer": {
     "send_button": "送信",
@@ -601,6 +602,7 @@
     "network_not_found_title": "ネットワークが見つかりません",
     "network_not_found_description": "ウォレットにチェーンID {{chain_id}} のネットワークが見つかりません。はじめにネットワークを追加してください。",
     "network_missing_id": "チェーンIDがありません。",
+    "search_tokens": "Search tokens",
     "search_tokens_and_nfts": "トークンとNFTを検索",
     "tokens": "トークン",
     "nfts": "NFT",
@@ -610,6 +612,11 @@
     "could_not_resolve_name": "名前の解決ができませんでした",
     "invalid_address": "無効なアドレス",
     "contractAddressError": "トークンのコントラクトアドレスにトークンを送金しようとしています。これにより、当該トークンが失われる可能性があります。"
+  },
+  "unified_ramp": {
+    "networks_filter_bar": {
+      "all_networks": "All"
+    }
   },
   "deposit": {
     "title": "入金",
@@ -640,13 +647,15 @@
       "apply": "適用"
     },
     "configuration_modal": {
-      "title": "オプション",
+      "title": "Settings",
       "view_order_history": "注文履歴を表示",
       "contact_support": "サポートへのお問い合わせ",
-      "log_out": "ログアウト",
+      "log_out": "Log out of Transak",
       "logged_out_success": "ログアウトしました",
       "error_sdk_not_initialized": "SDKが初期化されていません",
-      "logged_out_error": "ログアウト中にエラーが発生しました"
+      "logged_out_error": "ログアウト中にエラーが発生しました",
+      "more_ways_to_buy": "More ways to buy",
+      "more_ways_to_buy_description": "Use a different payment provider"
     },
     "region_modal": {
       "select_a_region": "地域を選択",
@@ -775,7 +784,9 @@
       "dob_required": "生年月日は必須項目です",
       "dob_invalid": "有効な生年月日を入力してください",
       "ssn_required": "社会保障番号は必須項目です",
-      "unexpected_error": "予期せぬエラーが発生しました。もう一度お試しください。"
+      "unexpected_error": "予期せぬエラーが発生しました。もう一度お試しください。",
+      "phone_already_registered": "This phone number is already in use by {{email}}. Log in using this email to continue.",
+      "login_with_email": "Log in with email"
     },
     "enter_address": {
       "navbar_title": "本人確認を行う",
@@ -1038,10 +1049,10 @@
       "max": "最大額",
       "percentage_10": "10%",
       "percentage_25": "25%",
-      "available_balance": "使用可能なパーペチュアル残高: {{amount}}",
+      "available_balance": "Available Perps balance: {{amount}}",
       "receive": "受取",
       "provider_fee": "プロバイダーの手数料",
-      "you_will_receive": "受取額",
+      "you_will_receive": "You receive",
       "continue": "続行",
       "funds_received": "{{amount}} {{symbol}}受け取りました"
     },
@@ -1094,7 +1105,8 @@
         "please_set_a_limit_price": "リミット価格を設定してください",
         "limit_price_must_be_set_before_configuring_tpsl": "リミット価格の設定はTP/SLの設定前に行う必要があります",
         "only_hyperliquid_usdc": "現在、HyperliquidのUSDCだけが支払いに使用できます",
-        "limit_price_far_warning": "リミット価格が現在の市場価格から離れすぎています"
+        "limit_price_far_warning": "リミット価格が現在の市場価格から離れすぎています",
+        "oi_cap_reached": "Open interest cap reached. New positions cannot be opened at this time."
       },
       "error": {
         "placement_failed": "注文に失敗しました",
@@ -1152,7 +1164,7 @@
         "set_leverage": "{{leverage}}倍に設定"
       },
       "type": {
-        "title": "注文タイプ",
+        "title": "Order type",
         "market": {
           "title": "マーケット",
           "description": "現在の市場価格で直ちに執行します"
@@ -1596,6 +1608,11 @@
       "error_title": "注文のチャンセルに失敗しました",
       "error_message": "{{count}}件の注文のキャンセルに失敗しました"
     },
+    "crossMargin": {
+      "title": "Cross Margin Not Supported",
+      "message": "MetaMask Perps only support trading with isolated margin. You need to first close your cross margin position before you can trade on MetaMask.",
+      "dismiss": "Got it"
+    },
     "sort": {
       "volume": "取引量",
       "price_change": "価格変動",
@@ -1676,7 +1693,7 @@
         "history_will_appear": "ここに取引履歴が表示されます"
       }
     },
-    "risk_disclaimer": "パーペチュアルコントラクトは大きなリスクを伴い、予告なく突然、投資額全額を失う可能性があります。取引はすべてお客様の責任で行ってください。市場データ提供元: Hyperliquid。価格チャート提供元: ",
+    "risk_disclaimer": "Perpetual contracts are very risky, and you could suddenly and without notice lose your entire investment. You trade entirely at your own risk. Powered by {{source}}. Price chart powered by",
     "tutorial": {
       "continue": "続行",
       "skip": "スキップ",
@@ -1709,6 +1726,7 @@
         "footer_text": "MetaMaskはArbitrum上で資金をUSDCにスワップし、追加手数料なしでHyperCoreに入金します。"
       },
       "got_it": "了解",
+      "lets_go": "Let's go",
       "card": {
         "title": "パーペチュアルの基本"
       }
@@ -1745,6 +1763,7 @@
       "end_date": "終了日時",
       "resolver": "レゾルバー",
       "powered_by": "提供元:",
+      "resolution_details": "Resolution details",
       "yes": "はい",
       "no": "いいえ",
       "on": "に",
@@ -1768,6 +1787,10 @@
     "sell_position": "売りポジション",
     "cash_out": "キャッシュアウト",
     "cash_out_info": "資金は利用可能残高に追加されます",
+    "at_price_per_share": "At price: {{price}}¢ per share",
+    "cashout_info": "{{amount}} on {{outcome}} at {{initialPrice}}¢",
+    "position_info_plural": "{{amount}} on {{outcome}} · {{shares}} shares at {{priceCents}}",
+    "position_info_singular": "{{amount}} on {{outcome}} · {{shares}} share at {{priceCents}}",
     "buy_yes": "はい",
     "buy_no": "いいえ",
     "outcomes": "結果",
@@ -1782,6 +1805,9 @@
     },
     "outcomes_singular": "結果",
     "outcomes_plural": "結果",
+    "outcome_winner": "Winner",
+    "outcome_loser": "Loser",
+    "outcome_draw": "Draw",
     "resolved_outcomes": "Resolved outcomes",
     "category": {
       "trending": "人気上昇中",
@@ -1804,6 +1830,7 @@
       "title": "お客様の地域では利用できません",
       "description": "法的な制限により、この地域では予測が利用できません。",
       "link": "Polymarketの利用規約を見る",
+      "webview_title": "Polymarket Terms",
       "button": "了解"
     },
     "deposit": {
@@ -1823,6 +1850,14 @@
     "add_funds_sheet": {
       "title": "資金を追加",
       "description": "予測を始めるには資金を追加してください。どのトークンでも入金でき、すぐに予測を開始できます。"
+    },
+    "consent_sheet": {
+      "title": "Terms of use",
+      "description": "MetaMask partners with Polymarket to offer prediction markets. All of our available markets, orders, and settlements happen on Polymarket.",
+      "learn_more": "Learn more.",
+      "agree": "Agree",
+      "disagree": "Disagree",
+      "disclaimer": "By continuing, you accept Polymarket’s terms."
     },
     "transactions": {
       "title": "予測",
@@ -1845,7 +1880,9 @@
       "net_pnl": "純損益",
       "total_net_pnl": "純損益額合計",
       "market_net_pnl": "マーケットの純損益額",
-      "activity_details": "アクティビティ詳細"
+      "activity_details": "アクティビティ詳細",
+      "today": "Today",
+      "yesterday": "Yesterday"
     },
     "claim": {
       "toasts": {
@@ -1900,13 +1937,15 @@
       "retry": "再試行"
     },
     "error_messages": {
-      "place_order_failed": "Failed to place order",
-      "preview_failed": "Failed to preview order",
-      "preview_no_order_book": "No order book found",
-      "preview_no_order_match_buy": "No order match found for buy",
-      "preview_no_order_match_sell": "No order match found for sell",
-      "claim_failed": "Failed to claim",
-      "unknown_error": "An unknown error occurred"
+      "not_eligible": "Not available in your region",
+      "place_order_failed": "注文に失敗しました",
+      "preview_failed": "注文のプレビューに失敗しました",
+      "preview_no_order_book": "オーダーブックが見つかりません",
+      "preview_no_order_match_buy": "一致する購入注文がありません",
+      "preview_no_order_match_sell": "一致する売却注文がありません",
+      "claim_failed": "請求に失敗しました",
+      "unknown_error": "不明なエラーが発生しました",
+      "order_not_fully_filled": "Failed to fill your order"
     }
   },
   "receive": {
@@ -2046,6 +2085,7 @@
     "learn_more": "詳細",
     "add_collectibles": "NFTをインポート",
     "nft_empty_description": "NFTの世界が無限に広がっています。さっそくコレクションを始めましょう。",
+    "tokens_empty_description": "Nothing to see yet. Why not browse tokens or make a trade?",
     "discover_nfts": "NFTをインポート",
     "no_transactions": "トランザクションがありません！",
     "switch_network_to_view_transactions": "トランザクションを表示するにはネットワークを切り替えてください",
@@ -2503,7 +2543,7 @@
     "nft_autodetect_mode": "NFTを自動検出",
     "nft_autodetect_desc": "NFTのメディアとデータを表示すると、IPアドレスが中央サーバーに公開される可能性があります。ウォレットのNFTを検出するには、サードパーティー API (OpenSea など) が使用されます。これによりこれらのサービスにアカウントのアドレスが公開されます。アプリがこれらのサービスからデータを取得しないようにするには、この機能を無効のままにしてください。",
     "show_fiat_on_testnets": "テストネット上に換算レートを表示",
-    "show_fiat_on_testnets_desc": "これを選択すると、テストネット上に法定通貨の換算レートが表示されます",
+    "show_fiat_on_testnets_desc": "Select this to show fiat conversion on test networks.",
     "show_fiat_on_testnets_modal_title": "ご注意ください",
     "show_fiat_on_testnets_modal_description": "この機能をオンにするよう求められた場合、詐欺の可能性があります。これらのトークンはテスト専用で、金銭的価値を一切持ちません。この機能は開発者がアプリの動作を確認するのに役立ちます。",
     "show_fiat_on_testnets_modal_learn_more": "詳細を見る。",
@@ -2517,9 +2557,9 @@
     "jazzicons": "Jazzicon",
     "blockies": "Blockie",
     "general_title": "一般",
-    "general_desc": "通貨換算、主要通貨、言語、検索エンジン",
+    "general_desc": "Currency conversion, primary currency, language and search engine.",
     "advanced_title": "高度な設定",
-    "advanced_desc": "開発者機能、アカウントのリセット、テストネットのセットアップ、ステータスログ、IPFSゲートウェイ、カスタムRPC",
+    "advanced_desc": "Access developer features, reset account, setup testnets, state logs, IPFS gateway and custom RPC.",
     "notifications_title": "通知",
     "notifications_desc": "通知の管理",
     "allow_notifications": "通知を許可する",
@@ -2543,9 +2583,9 @@
       "perps_title": "パーペチュアル取引"
     },
     "contacts_title": "連絡先",
-    "contacts_desc": "アカウントを追加、編集、削除、管理します",
+    "contacts_desc": "Add, edit, remove, and manage your accounts.",
     "permissions_title": "アクセス許可",
-    "permissions_desc": "サイトやアプリに付与されたアクセス許可を管理します",
+    "permissions_desc": "Manage the permissions given to sites and apps.",
     "no_permissions": "アクセス許可がありません",
     "no_permissions_desc": "サイトまたはアプリにアカウントを接続すると、ここに表示されます。",
     "security_title": "セキュリティとプライバシー",
@@ -2951,6 +2991,8 @@
     "deposit_description": "手数料の少ない銀行またはカード送金",
     "buy": "購入",
     "buy_description": "特定のトークンの購入に適しています",
+    "buy_unified": "購入",
+    "buy_unified_description": "現金で仮想通貨を購入します",
     "sell": "出金",
     "sell_description": "仮想通貨を売って現金化します"
   },
@@ -3005,7 +3047,7 @@
     "send_description": "仮想通貨を任意のアカウントに送金します",
     "receive_description": "仮想通貨を受け取ります",
     "earn_description": "トークンに対してリワードを獲得します",
-    "perps_description": "パーペチュアル契約を取引します",
+    "perps_description": "Trade perps contracts",
     "predict_description": "現実世界の出来事を対象に取引できます",
     "chart_time_period": {
       "1d": "今日",
@@ -3216,6 +3258,7 @@
     "failed": "失敗",
     "cancelled": "キャンセル済み",
     "signed": "保留中",
+    "unconfirmed": "Pending",
     "tokenContractAddressWarning_1": "このアドレスは",
     "tokenContractAddressWarning_2": "トークンコントラクトアドレスです。",
     "tokenContractAddressWarning_3": "このアドレスにトークンを送ると、トークンが失われます。",
@@ -3762,6 +3805,9 @@
   },
   "import_new_secret_recovery_phrase": {
     "title": "シークレットリカバリーフレーズをインポート",
+    "import_wallet_title": "Import a wallet",
+    "enter_srp_subtitle": "Enter your Secret Recovery Phrase",
+    "textarea_placeholder": "Add a space between each word and make sure no one is watching",
     "description": "ウォレットのシークレットリカバリーフレーズを入力してください。イーサリアム、Solana、ビットコインのシークレットリカバリーフレーズをインポートできます。",
     "subtitle": "シークレットリカバリーフレーズを貼り付けます",
     "cta_text": "続行",
@@ -3782,6 +3828,8 @@
     "error_multiple_srp_word_error_3": "が正しくないか、スペルが間違っています。",
     "error_invalid_srp": "無効なシークレットリカバリーフレーズ",
     "error_duplicate_srp": "このシークレットリカバリーフレーズはすでにインポートされています。",
+    "invalid_qr_code_title": "Invalid QR Code",
+    "invalid_qr_code_message": "The QR code does not contain a valid Secret Recovery Phrase",
     "success_1": "ウォレット",
     "success_2": "インポートされました"
   },
@@ -4243,13 +4291,13 @@
   },
   "experimental_settings": {
     "wallet_connect_dapps": "WalletConnectセッション",
-    "wallet_connect_dapps_desc": "アクティブなWalletConnectセッションのリストを表示",
+    "wallet_connect_dapps_desc": "View the list of active WalletConnect sessions.",
     "wallet_connect_dapps_cta": "セッションを表示",
     "network_not_supported": "現在のネットワークはサポートされていません",
     "select_provider": "希望のプロバイダーを選択してください",
     "switch_network": "メインネットまたはSepoliaに切り替えてください",
     "card_title": "MetaMaskカードボタンを常に表示する",
-    "card_desc": "MetaMaskカードは一部の国にお住まいの方のみご利用いただけます"
+    "card_desc": "MetaMask Card is only available to residents of select countries."
   },
   "walletconnect_sessions": {
     "no_active_sessions": "アクティブなセッションがありません",
@@ -4399,6 +4447,13 @@
     "order_status_completed": "完了",
     "order_status_failed": "失敗",
     "order_status_cancelled": "キャンセル済み",
+    "webview_no_url_provided": "No URL was provided to continue",
+    "webview_error_no_address_provided": "No wallet address was provided to continue",
+    "settings_modal": {
+      "title": "Settings",
+      "use_new_buy_experience": "Use new buy experience",
+      "use_new_buy_experience_description": "Try new native on ramp"
+    },
     "onboarding": {
       "what_to_expect": "今後の流れ",
       "quotes": "当社の仮想通貨購入機能は提携ベンダーからクォートを集め、それらのソースからのクォートを提供し、待ち時間なしで直接ウォレットに仮想通貨を入金します。",
@@ -5291,6 +5346,7 @@
     "service_interruption_banner": {
       "maintenance_message": "メンテナンス中のためご利用いただけません。再開まで今しばらくお待ちください。"
     },
+    "supply": "Supply",
     "deposit": "入金する",
     "approve": "承認",
     "approval": "承認",
@@ -5775,13 +5831,13 @@
     "apply": "適用",
     "slippage": "スリッページ",
     "slippage_info": "発注から確定までの間に価格が変わることを「スリッページ」といいます。スリッページがここで設定された許容範囲を超えた場合、スワップは自動的にキャンセルされます。",
-    "network_fee": "ネットワーク手数料",
+    "network_fee": "Network fee",
     "included": "込み",
     "estimated_time": "予想時間",
     "quote": "クォート",
     "rate": "レート",
     "quote_details": "クォートの詳細",
-    "price_impact": "プライスインパクト",
+    "price_impact": "Price impact",
     "time": "時間",
     "quote_info_content": "プロバイダーから取得した最良のレート（プロバイダー手数料と0.875%のMetaMask手数料込み）。",
     "quote_info_title": "レート",
@@ -5825,7 +5881,7 @@
     "approval_needed": "トークンのスワップを承認します。",
     "approval_tooltip_title": "アクセス許可は正確に",
     "approval_tooltip_content": "指定された金額（{{amount}} {{symbol}}）へのアクセスを許可します。コントラクトは追加の資金にアクセスしません。",
-    "minimum_received": "最低受取額",
+    "minimum_received": "Minimum received",
     "minimum_received_tooltip_title": "最低受取額",
     "minimum_received_tooltip_content": "トランザクションの処理中に価格が変動した場合に、お客様のスリッページ許容値に基づいて受け取る最低額です。これは流動性プロバイダーからの見積もりであり、最終的な金額は異なる場合があります。",
     "verified_token": "確認済みのトークン",
@@ -6181,6 +6237,12 @@
         "verify_button": "認証を開始",
         "start_verification_error": "認証の開始中にエラーが発生しました。後ほど再試行してください。"
       },
+      "kyc_webview": {
+        "close_confirmation_title": "Exit verification?",
+        "close_confirmation_message": "If you exit now, you'll need to restart the identity verification process. Are you sure you want to exit?",
+        "cancel_button": "Stay",
+        "close_button": "Exit"
+      },
       "validating_kyc": {
         "title": "KYCを検証中…",
         "timeout_button": "検証を再度開始"
@@ -6276,6 +6338,7 @@
       "logout_confirmation_message": "MetaMaskカードアカウントからログアウトしてよろしいですか？",
       "logout_confirmation_cancel": "キャンセル",
       "logout_confirmation_confirm": "ログアウト",
+      "enable_card_error": "Failed to enable card. Please try again later.",
       "warnings": {
         "close_spending_limit": {
           "title": "利用限度額に近づいています",
@@ -6396,7 +6459,8 @@
     "report_submitted": "エラーレポートが送信されました。"
   },
   "pay_with_modal": {
-    "title": "支払方法を選択"
+    "title": "支払方法を選択",
+    "no_gas": "No native balance for gas"
   },
   "connection_removed_modal": {
     "title": "接続が削除されました",
@@ -6609,21 +6673,21 @@
       "supported_networks": "サポートされているネットワーク",
       "swap": {
         "title": "スワップ",
-        "description": "$100ごとに80ポイント",
+        "description": "8 points per $10",
         "sheet": {
           "title": "トークンをスワップ",
-          "points": "$100ごとに80ポイント",
+          "points": "8 points per $10",
           "description": "サポートされているネットワークでトークンをスワップすると、1ドル取引するごとにポイントを獲得できます。",
           "cta_label": "スワップを開始"
         }
       },
       "perps": {
         "title": "パーペチュアル",
-        "description": "10 points per $100 order value",
+        "description": "注文価値$100ごとに10ポイント",
         "sheet": {
           "title": "パーペチュアルを取引",
-          "points": "10 points per $100 order value",
-          "description": "Earn points on every trade, including opens and closes, stop loss and take profit orders, and margin adjustments. Order value is based on the size with leverage.",
+          "points": "注文価値$100ごとに10ポイント",
+          "description": "Earn points on every trade, including opens and closes, stop loss and take profit orders, and margin adjustments. Order value is based on the size with leverage. If you have a fee discount, points will be discounted too.",
           "cta_label": "取引を開始"
         }
       },
@@ -6632,7 +6696,7 @@
         "description": "友達が50ポイント獲得するごとに10ポイント",
         "sheet": {
           "title": "友達を紹介",
-          "points": "100ごとに20ポイント付与",
+          "points": "10 points per 50",
           "cta_label": "友達を紹介"
         }
       },
@@ -6642,7 +6706,7 @@
         "sheet": {
           "title": "ロイヤルティボーナス",
           "points": "1250ドルごとに250ポイント",
-          "description": "MetaMaskで過去にスワップまたはブリッジを行ったアカウントを追加して、ロイヤルティボーナスを獲得しましょう。対象となるアカウントごとに、250ポイントずつ、最大50,000ポイントのロックを解除できます。ボーナスは、アカウントを追加するとすぐに反映されます。",
+          "description": "Add accounts with past MetaMask in-wallet swaps or bridges to earn loyalty bonuses. Each eligible account unlocks points in increments of 250, up to a total of 50,000. Bonuses appear shortly after you add an account.",
           "cta_label": "アカウントを追加"
         }
       },
@@ -6674,6 +6738,8 @@
       "link_account": "アカウントを追加",
       "tracked": "追跡中",
       "untracked": "未追跡",
+      "unsupported": "Unsupported",
+      "tracked_count": "{{optedIn}}/{{total}} tracked",
       "link_account_success": "{{accountName}}の追加が完了しました",
       "link_account_error": "{{accountName}}のアドレス追加に失敗しました"
     },
@@ -6751,5 +6817,9 @@
     "update_rpc": "RPCを更新",
     "check_network_connectivity": "ネットワーク接続を確認してください。",
     "check_network_connectivity_or": "ネットワーク接続を確認するか、"
+  },
+  "trending": {
+    "title": "Trending",
+    "coming_soon": "Trending tokens coming soon"
   }
 }

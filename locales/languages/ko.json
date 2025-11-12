@@ -542,7 +542,8 @@
     "activity": "활동",
     "trade": "거래하기",
     "settings": "설정",
-    "rewards": "보상"
+    "rewards": "보상",
+    "trending": "Trending"
   },
   "drawer": {
     "send_button": "보내기",
@@ -601,6 +602,7 @@
     "network_not_found_title": "네트워크를 찾을 수 없습니다",
     "network_not_found_description": "체인 id {{chain_id}}의 네트워크를 지갑에서 찾을 수 없습니다. 네트워크를 먼저 추가하세요.",
     "network_missing_id": "체인 id가 없습니다.",
+    "search_tokens": "Search tokens",
     "search_tokens_and_nfts": "토큰 및 NFT 검색",
     "tokens": "토큰",
     "nfts": "NFT",
@@ -610,6 +612,11 @@
     "could_not_resolve_name": "이름을 확인할 수 없습니다",
     "invalid_address": "잘못된 주소",
     "contractAddressError": "토큰의 계약 주소로 토큰을 보내고 있습니다. 이로 인해 해당 토큰이 손실될 수 있습니다."
+  },
+  "unified_ramp": {
+    "networks_filter_bar": {
+      "all_networks": "All"
+    }
   },
   "deposit": {
     "title": "예금",
@@ -640,13 +647,15 @@
       "apply": "적용"
     },
     "configuration_modal": {
-      "title": "옵션",
+      "title": "Settings",
       "view_order_history": "주문 내역 보기",
       "contact_support": "지원팀에 문의",
-      "log_out": "로그아웃",
+      "log_out": "Log out of Transak",
       "logged_out_success": "로그아웃했습니다",
       "error_sdk_not_initialized": "SDK가 초기화되지 않았습니다",
-      "logged_out_error": "로그아웃 오류"
+      "logged_out_error": "로그아웃 오류",
+      "more_ways_to_buy": "More ways to buy",
+      "more_ways_to_buy_description": "Use a different payment provider"
     },
     "region_modal": {
       "select_a_region": "지역 선택",
@@ -775,7 +784,9 @@
       "dob_required": "생년월일은 필수입니다",
       "dob_invalid": "유효한 생년월일을 입력해 주세요",
       "ssn_required": "사회보장번호는 필수입니다",
-      "unexpected_error": "예기치 못한 오류가 발생했습니다. 다시 시도하세요."
+      "unexpected_error": "예기치 못한 오류가 발생했습니다. 다시 시도하세요.",
+      "phone_already_registered": "This phone number is already in use by {{email}}. Log in using this email to continue.",
+      "login_with_email": "Log in with email"
     },
     "enter_address": {
       "navbar_title": "본인 인증",
@@ -1038,10 +1049,10 @@
       "max": "최대",
       "percentage_10": "10%",
       "percentage_25": "25%",
-      "available_balance": "사용 가능한 무기한 선물 잔액: {{amount}}",
+      "available_balance": "Available Perps balance: {{amount}}",
       "receive": "받기",
       "provider_fee": "공급자 수수료",
-      "you_will_receive": "받을 금액:",
+      "you_will_receive": "You receive",
       "continue": "계속",
       "funds_received": "{{amount}} {{symbol}} 받음"
     },
@@ -1094,7 +1105,8 @@
         "please_set_a_limit_price": "지정가를 설정해 주세요",
         "limit_price_must_be_set_before_configuring_tpsl": "익절/손절 구성 전에 지정가를 설정해야 합니다",
         "only_hyperliquid_usdc": "현재 Hyperliquid 결제는 USDC만 지원됩니다",
-        "limit_price_far_warning": "지정가가 현재 시장 가격과 거리가 멉니다"
+        "limit_price_far_warning": "지정가가 현재 시장 가격과 거리가 멉니다",
+        "oi_cap_reached": "Open interest cap reached. New positions cannot be opened at this time."
       },
       "error": {
         "placement_failed": "주문 실패",
@@ -1152,7 +1164,7 @@
         "set_leverage": "{{leverage}}배 설정"
       },
       "type": {
-        "title": "주문 유형",
+        "title": "Order type",
         "market": {
           "title": "시장",
           "description": "현재 시장가로 즉시 체결"
@@ -1596,6 +1608,11 @@
       "error_title": "주문 취소 실패",
       "error_message": "{{count}}개 주문 취소 실패"
     },
+    "crossMargin": {
+      "title": "Cross Margin Not Supported",
+      "message": "MetaMask Perps only support trading with isolated margin. You need to first close your cross margin position before you can trade on MetaMask.",
+      "dismiss": "Got it"
+    },
     "sort": {
       "volume": "거래량",
       "price_change": "가격 변동",
@@ -1676,7 +1693,7 @@
         "history_will_appear": "회원님의 거래 내역이 여기에 표시됩니다"
       }
     },
-    "risk_disclaimer": "무기한 선물 계약은 매우 위험하며, 예고 없이 투자금 전액을 갑자기 잃을 수 있습니다. 모든 거래는 전적으로 본인의 책임입니다. 시장 데이터는 Hyperliquid에서 제공합니다. 가격 차트 제공:",
+    "risk_disclaimer": "Perpetual contracts are very risky, and you could suddenly and without notice lose your entire investment. You trade entirely at your own risk. Powered by {{source}}. Price chart powered by",
     "tutorial": {
       "continue": "계속",
       "skip": "건너뛰기",
@@ -1709,6 +1726,7 @@
         "footer_text": "MetaMask가 추가 수수료 없이 Arbitrum에서 자금을 USDC로 스왑하고 HyperCore에 입금합니다."
       },
       "got_it": "컨펌",
+      "lets_go": "Let's go",
       "card": {
         "title": "무기한 선물 기초 배우기"
       }
@@ -1745,6 +1763,7 @@
       "end_date": "종료 날짜",
       "resolver": "결과 확정자",
       "powered_by": "제공자:",
+      "resolution_details": "Resolution details",
       "yes": "예",
       "no": "아니요",
       "on": "활성화됨",
@@ -1768,6 +1787,10 @@
     "sell_position": "포지션 매도",
     "cash_out": "출금",
     "cash_out_info": "자금은 사용 가능한 잔액에 추가됩니다",
+    "at_price_per_share": "At price: {{price}}¢ per share",
+    "cashout_info": "{{amount}} on {{outcome}} at {{initialPrice}}¢",
+    "position_info_plural": "{{amount}} on {{outcome}} · {{shares}} shares at {{priceCents}}",
+    "position_info_singular": "{{amount}} on {{outcome}} · {{shares}} share at {{priceCents}}",
     "buy_yes": "예",
     "buy_no": "아니요",
     "outcomes": "결과",
@@ -1782,6 +1805,9 @@
     },
     "outcomes_singular": "결과",
     "outcomes_plural": "결과",
+    "outcome_winner": "Winner",
+    "outcome_loser": "Loser",
+    "outcome_draw": "Draw",
     "resolved_outcomes": "Resolved outcomes",
     "category": {
       "trending": "인기",
@@ -1804,6 +1830,7 @@
       "title": "귀하의 지역에서는 사용할 수 없습니다",
       "description": "법적 규제로 인해 이 지역에서는 예측 시장을 이용할 수 없습니다.",
       "link": "Polymarket 이용약관 보기",
+      "webview_title": "Polymarket Terms",
       "button": "컨펌"
     },
     "deposit": {
@@ -1823,6 +1850,14 @@
     "add_funds_sheet": {
       "title": "자금 추가",
       "description": "시작하려면 예측 계정에 자금을 추가해야 합니다. 어떤 토큰이든 입금하기만 하면 빠르게 첫 예측을 진행할 수 있습니다."
+    },
+    "consent_sheet": {
+      "title": "Terms of use",
+      "description": "MetaMask partners with Polymarket to offer prediction markets. All of our available markets, orders, and settlements happen on Polymarket.",
+      "learn_more": "Learn more.",
+      "agree": "Agree",
+      "disagree": "Disagree",
+      "disclaimer": "By continuing, you accept Polymarket’s terms."
     },
     "transactions": {
       "title": "예측",
@@ -1845,7 +1880,9 @@
       "net_pnl": "순손익",
       "total_net_pnl": "총 순손익",
       "market_net_pnl": "시장 순손익",
-      "activity_details": "거래 내역 세부 정보"
+      "activity_details": "거래 내역 세부 정보",
+      "today": "Today",
+      "yesterday": "Yesterday"
     },
     "claim": {
       "toasts": {
@@ -1900,13 +1937,15 @@
       "retry": "다시 시도"
     },
     "error_messages": {
+      "not_eligible": "Not available in your region",
       "place_order_failed": "주문 실패",
       "preview_failed": "주문 미리보기 실패",
       "preview_no_order_book": "주문 내역을 찾을 수 없음",
       "preview_no_order_match_buy": "구매 주문과 일치하는 주문이 없음",
       "preview_no_order_match_sell": "매도 주문과 일치하는 주문이 없음",
       "claim_failed": "수령 실패",
-      "unknown_error": "알 수 없는 오류가 발생했습니다"
+      "unknown_error": "알 수 없는 오류가 발생했습니다",
+      "order_not_fully_filled": "Failed to fill your order"
     }
   },
   "receive": {
@@ -2046,6 +2085,7 @@
     "learn_more": "더 알아보기",
     "add_collectibles": "NFT 불러오기",
     "nft_empty_description": "끝없이 펼쳐지는 NFT의 세계. 나만의 컬렉션을 만들어 보세요.",
+    "tokens_empty_description": "Nothing to see yet. Why not browse tokens or make a trade?",
     "discover_nfts": "NFT 가져오기",
     "no_transactions": "거래가 없습니다!",
     "switch_network_to_view_transactions": "트랜잭션을 보려면 네트워크를 전환하세요",
@@ -2503,7 +2543,7 @@
     "nft_autodetect_mode": "NFT 자동 감지",
     "nft_autodetect_desc": "NFT 미디어와 데이터를 표시하면, IP 주소가 중앙 서버에 노출될 수 있습니다. 타사 API(OpenSea 등)는 지갑의 NFT를 감지하는 데 사용됩니다. 그러면 해당 서비스의 계정 주소가 노출됩니다. 앱이 이러한 서비스에서 데이터를 가져오지 않게 하려면 이 옵션을 사용하지 않도록 설정하세요.",
     "show_fiat_on_testnets": "테스트 네트워크에 전환 표시",
-    "show_fiat_on_testnets_desc": "이 항목을 선택하면 테스트 네트워크에 법정 화폐 전환이 표시됩니다",
+    "show_fiat_on_testnets_desc": "Select this to show fiat conversion on test networks.",
     "show_fiat_on_testnets_modal_title": "주의하세요",
     "show_fiat_on_testnets_modal_description": "이 기능을 활성화할 것을 요청받았다면 사기일 가능성이 있습니다. 이 토큰은 금전적 가치가 없으며 테스트 목적으로만 사용됩니다. 이 기능은 개발자들이 자신의 앱이 작동하는지 확인하는 데 도움이 되는 기능입니다.",
     "show_fiat_on_testnets_modal_learn_more": "자세히 알아보세요.",
@@ -2517,9 +2557,9 @@
     "jazzicons": "Jazzicons",
     "blockies": "Blockies",
     "general_title": "일반",
-    "general_desc": "통화 변환, 기본 통화, 언어 및 검색 엔진",
+    "general_desc": "Currency conversion, primary currency, language and search engine.",
     "advanced_title": "고급",
-    "advanced_desc": "개발자 기능 액세스, 계정 초기화, 테스트넷 설정, 상태 로그, IPFS 게이트웨이 및 맞춤 RPC",
+    "advanced_desc": "Access developer features, reset account, setup testnets, state logs, IPFS gateway and custom RPC.",
     "notifications_title": "지갑 사용",
     "notifications_desc": "알림 관리",
     "allow_notifications": "알림 허용",
@@ -2543,9 +2583,9 @@
       "perps_title": "무기한 선물 거래"
     },
     "contacts_title": "연락처",
-    "contacts_desc": "계정 추가, 수정, 제거 및 관리",
+    "contacts_desc": "Add, edit, remove, and manage your accounts.",
     "permissions_title": "권한",
-    "permissions_desc": "사이트 및 앱에 부여된 권한 관리",
+    "permissions_desc": "Manage the permissions given to sites and apps.",
     "no_permissions": "권한 없음",
     "no_permissions_desc": "계정을 사이트나 앱에 연결하면 여기에 표시됩니다.",
     "security_title": "보안 & 개인정보 보호",
@@ -2951,6 +2991,8 @@
     "deposit_description": "수수료가 낮은 은행 또는 카드 이체",
     "buy": "매수",
     "buy_description": "특정 토큰 매수에 적합",
+    "buy_unified": "매수",
+    "buy_unified_description": "현금으로 암호화폐 구입",
     "sell": "출금",
     "sell_description": "암호화폐를 현금으로 매도"
   },
@@ -3005,7 +3047,7 @@
     "send_description": "원하는 계정에 암호화폐 보내기",
     "receive_description": "암호화폐 수령",
     "earn_description": "토큰으로 보상을 획득하세요",
-    "perps_description": "무기한 선물 계약 거래",
+    "perps_description": "Trade perps contracts",
     "predict_description": "현실 세계의 이슈를 기반으로 거래해 보세요",
     "chart_time_period": {
       "1d": "오늘",
@@ -3216,6 +3258,7 @@
     "failed": "실패",
     "cancelled": "취소됨",
     "signed": "보류 중",
+    "unconfirmed": "Pending",
     "tokenContractAddressWarning_1": "이 주소는 다음에 해당합니다:",
     "tokenContractAddressWarning_2": "토큰 계약 주소입니다",
     "tokenContractAddressWarning_3": ". 이 주소로 토큰을 보내면 토큰을 잃게 됩니다.",
@@ -3762,6 +3805,9 @@
   },
   "import_new_secret_recovery_phrase": {
     "title": "비밀복구구문 가져오기",
+    "import_wallet_title": "Import a wallet",
+    "enter_srp_subtitle": "Enter your Secret Recovery Phrase",
+    "textarea_placeholder": "Add a space between each word and make sure no one is watching",
     "description": "지갑의 비밀복구구문을 입력하세요. 이더리움, 솔라나, 비트코인의 비밀복구구문을 가져올 수 있습니다.",
     "subtitle": "비밀복구구문을 붙여넣으세요",
     "cta_text": "계속",
@@ -3782,6 +3828,8 @@
     "error_multiple_srp_word_error_3": " 이(가) 잘못되었거나 철자가 틀렸습니다.",
     "error_invalid_srp": "잘못된 비밀복구구문",
     "error_duplicate_srp": "이 비밀복구구문은 이미 가져왔습니다.",
+    "invalid_qr_code_title": "Invalid QR Code",
+    "invalid_qr_code_message": "The QR code does not contain a valid Secret Recovery Phrase",
     "success_1": "지갑",
     "success_2": "가져옴"
   },
@@ -4243,13 +4291,13 @@
   },
   "experimental_settings": {
     "wallet_connect_dapps": "지갑 연결 세션",
-    "wallet_connect_dapps_desc": "활성화된 지갑 연결 세션 목록을 확인하세요",
+    "wallet_connect_dapps_desc": "View the list of active WalletConnect sessions.",
     "wallet_connect_dapps_cta": "세션 보기",
     "network_not_supported": "현재 네트워크는 지원하지 않음",
     "select_provider": "선호하는 공급업체 선택",
     "switch_network": "메인넷이나 세폴리아로 전환하세요",
     "card_title": "MetaMask 카드 버튼 항상 표시",
-    "card_desc": "MetaMask 카드는 일부 국가의 거주자만 사용할 수 있습니다"
+    "card_desc": "MetaMask Card is only available to residents of select countries."
   },
   "walletconnect_sessions": {
     "no_active_sessions": "현재 활성화된 세션이 없습니다",
@@ -4399,6 +4447,13 @@
     "order_status_completed": "완료",
     "order_status_failed": "실패",
     "order_status_cancelled": "취소됨",
+    "webview_no_url_provided": "No URL was provided to continue",
+    "webview_error_no_address_provided": "No wallet address was provided to continue",
+    "settings_modal": {
+      "title": "Settings",
+      "use_new_buy_experience": "Use new buy experience",
+      "use_new_buy_experience_description": "Try new native on ramp"
+    },
     "onboarding": {
       "what_to_expect": "소개",
       "quotes": "MetaMask의 암호화폐 구매 기능은 통합된 공급업체로부터 견적을 집계하여 견적을 제공하므로 대기 기간 없이 암호화폐를 소스에서 지갑으로 직접 가져올 수 있습니다.",
@@ -5291,6 +5346,7 @@
     "service_interruption_banner": {
       "maintenance_message": "현재 점검 중입니다. 빠른 시일 내에 서비스를 재개하겠습니다!"
     },
+    "supply": "Supply",
     "deposit": "예치",
     "approve": "승인",
     "approval": "승인",
@@ -5775,13 +5831,13 @@
     "apply": "적용",
     "slippage": "슬리피지",
     "slippage_info": "주문이 제출되고 확정되는 시점 사이에 가격이 변동되는 것을 '슬리피지'라고 합니다. 슬리피지가 여기 설정한 허용치를 초과하면 스왑이 자동으로 취소됩니다.",
-    "network_fee": "네트워크 수수료",
+    "network_fee": "Network fee",
     "included": "포함됨",
     "estimated_time": "예상 시간",
     "quote": "확인에",
     "rate": "비율",
     "quote_details": "견적 세부 정보",
-    "price_impact": "가격 영향",
+    "price_impact": "Price impact",
     "time": "시간",
     "quote_info_content": "제공자 수수료와 0.875%의 MetaMask 수수료를 포함한 최적의 환율입니다.",
     "quote_info_title": "비율",
@@ -5825,7 +5881,7 @@
     "approval_needed": "토큰의 스왑 사용 권한을 승인합니다.",
     "approval_tooltip_title": "정확한 접근 권한 부여",
     "approval_tooltip_content": "지정된 금액, {{amount}} {{symbol}}에만 접근을 허용합니다. 계약은 추가 자금에 접근하지 않습니다.",
-    "minimum_received": "최소 수령 금액",
+    "minimum_received": "Minimum received",
     "minimum_received_tooltip_title": "최소 수령 금액",
     "minimum_received_tooltip_content": "이는 트랜잭션 처리 중 가격이 변동될 경우, 사용자의 슬리피지 허용 범위에 따라 최소한으로 수령할 수 있는 금액입니다. 이는 유동성 공급자들의 추정치이며, 최종 금액은 달라질 수 있습니다.",
     "verified_token": "검증된 토큰",
@@ -6181,6 +6237,12 @@
         "verify_button": "본인 확인 시작",
         "start_verification_error": "확인을 시작할 수 없습니다. 잠시 후에 다시 시도해 주세요."
       },
+      "kyc_webview": {
+        "close_confirmation_title": "Exit verification?",
+        "close_confirmation_message": "If you exit now, you'll need to restart the identity verification process. Are you sure you want to exit?",
+        "cancel_button": "Stay",
+        "close_button": "Exit"
+      },
       "validating_kyc": {
         "title": "KYC 검증 중...",
         "timeout_button": "인증 시작"
@@ -6276,6 +6338,7 @@
       "logout_confirmation_message": "MetaMask 카드 계정에서 로그아웃하시겠습니까?",
       "logout_confirmation_cancel": "취소",
       "logout_confirmation_confirm": "로그아웃",
+      "enable_card_error": "Failed to enable card. Please try again later.",
       "warnings": {
         "close_spending_limit": {
           "title": "이용한도가 얼마 남지 않았습니다",
@@ -6396,7 +6459,8 @@
     "report_submitted": "오류 보고서가 제출되었습니다."
   },
   "pay_with_modal": {
-    "title": "결제 방법 선택"
+    "title": "결제 방법 선택",
+    "no_gas": "No native balance for gas"
   },
   "connection_removed_modal": {
     "title": "연결 제거 완료",
@@ -6609,10 +6673,10 @@
       "supported_networks": "지원 네트워크",
       "swap": {
         "title": "스왑",
-        "description": "$100당 80포인트",
+        "description": "8 points per $10",
         "sheet": {
           "title": "토큰 스왑",
-          "points": "$100당 80포인트",
+          "points": "8 points per $10",
           "description": "지원되는 네트워크에서 토큰을 스왑하면 거래 금액에 비례하여 포인트를 획득할 수 있습니다.",
           "cta_label": "스왑 시작"
         }
@@ -6623,7 +6687,7 @@
         "sheet": {
           "title": "무기한 선물 거래하기",
           "points": "$100 상당의 주문을 할 때마다 10포인트 적립",
-          "description": "포지션 시작 및 종료, 손절 및 익절 주문, 마진 조정을 포함하는 모든 거래에서 포인트를 적립할 수 있습니다. 주문 금액은 레버리지를 적용한 포지션 크기를 기준으로 계산됩니다.",
+          "description": "Earn points on every trade, including opens and closes, stop loss and take profit orders, and margin adjustments. Order value is based on the size with leverage. If you have a fee discount, points will be discounted too.",
           "cta_label": "거래 시작"
         }
       },
@@ -6632,7 +6696,7 @@
         "description": "친구가 50포인트를 획득할 때마다 10포인트를 받습니다",
         "sheet": {
           "title": "친구 추천하기",
-          "points": "100포인트당 20포인트",
+          "points": "10 points per 50",
           "cta_label": "친구 추천하기"
         }
       },
@@ -6642,7 +6706,7 @@
         "sheet": {
           "title": "로열티 보너스",
           "points": "$1,250달러당 250포인트",
-          "description": "MetaMask에서 스왑 또는 브릿지 거래 내역이 있는 계정을 추가하면 로열티 보너스를 받을 수 있습니다. 조건을 충족하는 계정당 250포인트씩 적립되며, 최대 총 50,000포인트까지 획득할 수 있습니다. 보너스는 계정 추가 직후 지급됩니다.",
+          "description": "Add accounts with past MetaMask in-wallet swaps or bridges to earn loyalty bonuses. Each eligible account unlocks points in increments of 250, up to a total of 50,000. Bonuses appear shortly after you add an account.",
           "cta_label": "계정 추가"
         }
       },
@@ -6674,6 +6738,8 @@
       "link_account": "계정 추가",
       "tracked": "추적됨",
       "untracked": "추적되지 않음",
+      "unsupported": "Unsupported",
+      "tracked_count": "{{optedIn}}/{{total}} tracked",
       "link_account_success": "{{accountName}}이(가) 추가되었습니다",
       "link_account_error": "{{accountName}}에 하나 이상의 주소를 추가하지 못했습니다"
     },
@@ -6751,5 +6817,9 @@
     "update_rpc": "RPC 업데이트",
     "check_network_connectivity": "네트워크 연결을 확인하세요.",
     "check_network_connectivity_or": "네트워크 연결을 확인하거나"
+  },
+  "trending": {
+    "title": "Trending",
+    "coming_soon": "Trending tokens coming soon"
   }
 }

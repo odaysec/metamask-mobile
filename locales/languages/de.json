@@ -97,7 +97,7 @@
       "message": "Perps unterstützt keine Hardware-Wallets.\nWechseln Sie das Konto, um die Finanzierung fortzusetzen."
     },
     "burn_address": {
-      "message": "Sie senden Ihre Vermögenswerte an eine temporäre Adresse. Wenn Sie fortfahren, verlieren Sie Ihre Vermögenswerte.",
+      "message": "Sie senden Ihre Vermögenswerte an eine Burn-Adresse. Wenn Sie fortfahren, verlieren Sie Ihre Vermögenswerte.",
       "title": "Senden von Vermögenswerten an die Burn-Adresse"
     }
   },
@@ -542,7 +542,8 @@
     "activity": "Aktivität",
     "trade": "Trade",
     "settings": "Einstellungen",
-    "rewards": "Belohnungen"
+    "rewards": "Belohnungen",
+    "trending": "Trending"
   },
   "drawer": {
     "send_button": "Senden",
@@ -601,6 +602,7 @@
     "network_not_found_title": "Netzwerk nicht gefunden",
     "network_not_found_description": "Das Netzwerk mit der Chain-ID {{chain_id}} wurde in Ihrem Wallet nicht gefunden. Bitte fügen Sie das Netzwerk erst hinzu.",
     "network_missing_id": "Fehlende Chain-ID.",
+    "search_tokens": "Search tokens",
     "search_tokens_and_nfts": "Token und NFTs suchen",
     "tokens": "Token",
     "nfts": "NFTs",
@@ -610,6 +612,11 @@
     "could_not_resolve_name": "Name konnte nicht aufgelöst werden",
     "invalid_address": "Ungültige Adresse",
     "contractAddressError": "Sie senden Tokens an die Kontraktadresse des Tokens. Dies kann zum Verlust dieser Tokens führen."
+  },
+  "unified_ramp": {
+    "networks_filter_bar": {
+      "all_networks": "All"
+    }
   },
   "deposit": {
     "title": "Einzahlen",
@@ -640,13 +647,15 @@
       "apply": "Anwenden"
     },
     "configuration_modal": {
-      "title": "Optionen",
+      "title": "Settings",
       "view_order_history": "Order-Verlauf anzeigen",
       "contact_support": "Support kontaktieren",
-      "log_out": "Abmelden",
+      "log_out": "Log out of Transak",
       "logged_out_success": "Erfolgreich abgemeldet",
       "error_sdk_not_initialized": "SDK nicht eingeleitet",
-      "logged_out_error": "Fehler beim Abmelden"
+      "logged_out_error": "Fehler beim Abmelden",
+      "more_ways_to_buy": "More ways to buy",
+      "more_ways_to_buy_description": "Use a different payment provider"
     },
     "region_modal": {
       "select_a_region": "Region auswählen",
@@ -775,7 +784,9 @@
       "dob_required": "Geburtsdatum ist erforderlich",
       "dob_invalid": "Geben Sie bitte ein gültiges Geburtsdatum ein",
       "ssn_required": "Sozialversicherungsnummer ist erforderlich",
-      "unexpected_error": "Ein unerwarteter Fehler ist aufgetreten. Bitte versuchen Sie es erneut."
+      "unexpected_error": "Ein unerwarteter Fehler ist aufgetreten. Bitte versuchen Sie es erneut.",
+      "phone_already_registered": "This phone number is already in use by {{email}}. Log in using this email to continue.",
+      "login_with_email": "Log in with email"
     },
     "enter_address": {
       "navbar_title": "Verifizieren Sie Ihre Identität",
@@ -1038,10 +1049,10 @@
       "max": "Max.",
       "percentage_10": "10 %",
       "percentage_25": "25 %",
-      "available_balance": "Verfügbares Perps-Guthaben: {{amount}}",
+      "available_balance": "Available Perps balance: {{amount}}",
       "receive": "Empfangen",
       "provider_fee": "Anbietergebühr",
-      "you_will_receive": "Sie empfangen",
+      "you_will_receive": "You receive",
       "continue": "Fortfahren",
       "funds_received": "{{amount}} {{symbol}} empfangen"
     },
@@ -1094,7 +1105,8 @@
         "please_set_a_limit_price": "Bitte legen Sie einen Limit-Preis fest",
         "limit_price_must_be_set_before_configuring_tpsl": "Der Limit-Preis muss vor der Konfiguration von TP/SL festgelegt werden",
         "only_hyperliquid_usdc": "Auf Hyperliquid wird derzeit nur USDC als Zahlungsmittel unterstützt",
-        "limit_price_far_warning": "Limit-Preis weicht stark vom aktuellen Marktpreis ab"
+        "limit_price_far_warning": "Limit-Preis weicht stark vom aktuellen Marktpreis ab",
+        "oi_cap_reached": "Open interest cap reached. New positions cannot be opened at this time."
       },
       "error": {
         "placement_failed": "Ordererteilung fehlgeschlagen",
@@ -1152,7 +1164,7 @@
         "set_leverage": "{{leverage}}x festlegen"
       },
       "type": {
-        "title": "Orderart",
+        "title": "Order type",
         "market": {
           "title": "Markt",
           "description": "Sofort zum aktuellen Marktpreis ausführen"
@@ -1596,6 +1608,11 @@
       "error_title": "Stornierung der Orders fehlgeschlagen",
       "error_message": "Stornierung von {{count}} Order(s) fehlgeschlagen"
     },
+    "crossMargin": {
+      "title": "Cross Margin Not Supported",
+      "message": "MetaMask Perps only support trading with isolated margin. You need to first close your cross margin position before you can trade on MetaMask.",
+      "dismiss": "Got it"
+    },
     "sort": {
       "volume": "Volumen",
       "price_change": "Preisänderung",
@@ -1676,7 +1693,7 @@
         "history_will_appear": "Ihr Trading-Verlauf wird hier angezeigt"
       }
     },
-    "risk_disclaimer": "Unbefristete Kontrakte bergen erhebliche Risiken, wobei Sie plötzlich und ohne Vorankündigung Ihre gesamte Investition verlieren können. Sie handeln vollständig auf Ihr eigenes Risiko. Marktdaten bereitgestellt von Hyperliquid. Kurschart bereitgestellt von",
+    "risk_disclaimer": "Perpetual contracts are very risky, and you could suddenly and without notice lose your entire investment. You trade entirely at your own risk. Powered by {{source}}. Price chart powered by",
     "tutorial": {
       "continue": "Fortfahren",
       "skip": "Überspringen",
@@ -1709,6 +1726,7 @@
         "footer_text": "MetaMask swappt Ihre Gelder auf Arbitrum in USDC und zahlt sie ohne zusätzliche Gebühr auf HyperCore ein."
       },
       "got_it": "Verstanden",
+      "lets_go": "Let's go",
       "card": {
         "title": "Lernen Sie die Grundlagen von Perps"
       }
@@ -1745,6 +1763,7 @@
       "end_date": "Enddatum",
       "resolver": "Resolver",
       "powered_by": "Unterstützt durch",
+      "resolution_details": "Resolution details",
       "yes": "Ja",
       "no": "Nein",
       "on": "bei",
@@ -1768,6 +1787,10 @@
     "sell_position": "Verkaufsposition",
     "cash_out": "Auszahlung",
     "cash_out_info": "Gelder werden Ihrem verfügbaren Guthaben hinzugefügt",
+    "at_price_per_share": "At price: {{price}}¢ per share",
+    "cashout_info": "{{amount}} on {{outcome}} at {{initialPrice}}¢",
+    "position_info_plural": "{{amount}} on {{outcome}} · {{shares}} shares at {{priceCents}}",
+    "position_info_singular": "{{amount}} on {{outcome}} · {{shares}} share at {{priceCents}}",
     "buy_yes": "Ja",
     "buy_no": "Nein",
     "outcomes": "Ergebnisse",
@@ -1782,6 +1805,9 @@
     },
     "outcomes_singular": "ergebnis",
     "outcomes_plural": "Ergebnisse",
+    "outcome_winner": "Winner",
+    "outcome_loser": "Loser",
+    "outcome_draw": "Draw",
     "resolved_outcomes": "Resolved outcomes",
     "category": {
       "trending": "Angesagt",
@@ -1804,6 +1830,7 @@
       "title": "In Ihrer Region nicht verfügbar",
       "description": "Aufgrund rechtlicher Einschränkungen sind in Ihrer Region keine Prognosen verfügbar.",
       "link": "Siehe Polymarket-Bedingungen",
+      "webview_title": "Polymarket Terms",
       "button": "Verstanden"
     },
     "deposit": {
@@ -1823,6 +1850,14 @@
     "add_funds_sheet": {
       "title": "Gelder hinzufügen",
       "description": "Um loszulegen, müssen Sie zunächst Geld auf Ihr Prognosenkonto einzahlen. Sie können beliebige Token hinzufügen und in Sekundenschnelle Ihre erste Prognose treffen."
+    },
+    "consent_sheet": {
+      "title": "Terms of use",
+      "description": "MetaMask partners with Polymarket to offer prediction markets. All of our available markets, orders, and settlements happen on Polymarket.",
+      "learn_more": "Learn more.",
+      "agree": "Agree",
+      "disagree": "Disagree",
+      "disclaimer": "By continuing, you accept Polymarket’s terms."
     },
     "transactions": {
       "title": "Prognosen",
@@ -1845,7 +1880,9 @@
       "net_pnl": "Netto-GuV",
       "total_net_pnl": "Gesamter Nettogewinn und -verlust",
       "market_net_pnl": "Marktnettogewinn und -verlust",
-      "activity_details": "Aktivitätsdetails"
+      "activity_details": "Aktivitätsdetails",
+      "today": "Today",
+      "yesterday": "Yesterday"
     },
     "claim": {
       "toasts": {
@@ -1900,13 +1937,15 @@
       "retry": "Erneut versuchen"
     },
     "error_messages": {
+      "not_eligible": "Not available in your region",
       "place_order_failed": "Erteilung der Order fehlgeschlagen",
       "preview_failed": "Vorschau der Order fehlgeschlagen",
       "preview_no_order_book": "Kein Orderbuch gefunden",
       "preview_no_order_match_buy": "Keine Übereinstimmung der Order zum Kaufen gefunden",
       "preview_no_order_match_sell": "Keine Übereinstimmung der Order zum Verkaufen gefunden",
       "claim_failed": "Einfordern fehlgeschlagen",
-      "unknown_error": "Ein unerwarteter Fehler ist aufgetreten"
+      "unknown_error": "Ein unerwarteter Fehler ist aufgetreten",
+      "order_not_fully_filled": "Failed to fill your order"
     }
   },
   "receive": {
@@ -2046,6 +2085,7 @@
     "learn_more": "Mehr erfahren",
     "add_collectibles": "NFTs importieren",
     "nft_empty_description": "Es gibt eine ganze Welt voller NFTs da draußen. Beginnen Sie noch heute mit Ihrer Sammlung.",
+    "tokens_empty_description": "Nothing to see yet. Why not browse tokens or make a trade?",
     "discover_nfts": "NFTs importieren",
     "no_transactions": "Sie haben keine Transaktionen!",
     "switch_network_to_view_transactions": "Wechseln Sie bitte das Netzwerk, um Transaktionen anzuzeigen",
@@ -2503,7 +2543,7 @@
     "nft_autodetect_mode": "NFTs automatisch erkennen",
     "nft_autodetect_desc": "Das Anzeigen von NFT-Medien und -Daten könnte Ihre IT-Adresse an zentralisierte Server weitergeben. Drittanbieter-APIs (wie OpenSea) werden zur Erkennung von NFTs in Ihrem Wallet verwendet. Dies gibt Ihre Kontoadresse an diese Dienste weiter. Lassen Sie diese Funktion deaktiviert, wenn Sie nicht möchten, dass die App Daten von diesen Diensten abruft.",
     "show_fiat_on_testnets": "Umrechnung auf Testnetzwerk anzeigen",
-    "show_fiat_on_testnets_desc": "Wählen Sie dies aus, um die Fiat-Umrechnung in Testnetzwerken anzuzeigen.",
+    "show_fiat_on_testnets_desc": "Select this to show fiat conversion on test networks.",
     "show_fiat_on_testnets_modal_title": "Sein Sie vorsichtig.",
     "show_fiat_on_testnets_modal_description": "Wenn Sie aufgefordert wurden, diese Funktion zu aktivieren, werden Sie möglicherweise betrogen. Diese Tokens haben keinen Geldwert und sind nur für Testzwecke gedacht. Diese Funktion hilft Entwicklern, sicherzustellen, dass ihre Apps funktionieren.",
     "show_fiat_on_testnets_modal_learn_more": "Mehr erfahren.",
@@ -2517,9 +2557,9 @@
     "jazzicons": "Jazzicons",
     "blockies": "Blockies",
     "general_title": "Allgemein",
-    "general_desc": "Währungsumrechnung, Primärwährung, Sprache und Suchmaschine",
+    "general_desc": "Currency conversion, primary currency, language and search engine.",
     "advanced_title": "Erweitert",
-    "advanced_desc": "Greifen Sie auf Entwicklerfunktionen, die Kontozurücksetzung, die Erstellung von Testnets, Statuslogs, das IPFS-Gateway und benutzerdefiniertes RPC zu.",
+    "advanced_desc": "Access developer features, reset account, setup testnets, state logs, IPFS gateway and custom RPC.",
     "notifications_title": "Benachrichtigungen",
     "notifications_desc": "Verwalten Sie Ihre Benachrichtigungen",
     "allow_notifications": "Benachrichtigungen erlauben",
@@ -2543,9 +2583,9 @@
       "perps_title": "Perps-Trading"
     },
     "contacts_title": "Kontakte",
-    "contacts_desc": "Konten hinzufügen, bearbeiten, entfernen und verwalten",
+    "contacts_desc": "Add, edit, remove, and manage your accounts.",
     "permissions_title": "Genehmigungen",
-    "permissions_desc": "Verwalten Sie die für Websites und Apps erteilten Genehmigungen",
+    "permissions_desc": "Manage the permissions given to sites and apps.",
     "no_permissions": "Keine Genehmigungen",
     "no_permissions_desc": "Wenn Sie ein Konto mit einer Website oder einer App verbinden, wird es hier angezeigt.",
     "security_title": "Sicherheit & Privatsphäre",
@@ -2951,6 +2991,8 @@
     "deposit_description": "Kostengünstige Bank- oder Kartenüberweisung",
     "buy": "Kaufen",
     "buy_description": "Ideal für den Kauf eines speziellen Tokens",
+    "buy_unified": "Kaufen",
+    "buy_unified_description": "Krypto mit Bargeld kaufen",
     "sell": "Auszahlen",
     "sell_description": "Krypto für Bargeld verkaufen"
   },
@@ -3005,7 +3047,7 @@
     "send_description": "Krypto an ein beliebiges Konto senden",
     "receive_description": "Krypto empfangen",
     "earn_description": "Verdienen Sie Belohnungen für Ihre Tokens",
-    "perps_description": "Trading mit Perp-Kontrakten",
+    "perps_description": "Trade perps contracts",
     "predict_description": "Handeln Sie auf Grundlage realer Ereignisse",
     "chart_time_period": {
       "1d": "Heute",
@@ -3216,6 +3258,7 @@
     "failed": "Fehlgeschlagen",
     "cancelled": "Storniert",
     "signed": "Ausstehend",
+    "unconfirmed": "Pending",
     "tokenContractAddressWarning_1": "WARNUNG: Diese Adresse ist eine",
     "tokenContractAddressWarning_2": "Token-Contract-Adresse",
     "tokenContractAddressWarning_3": ". Wenn Sie Token an diese Adresse senden, werden Sie diese verlieren.",
@@ -3762,6 +3805,9 @@
   },
   "import_new_secret_recovery_phrase": {
     "title": "Geheime Wiederherstellungsphrase importieren",
+    "import_wallet_title": "Import a wallet",
+    "enter_srp_subtitle": "Enter your Secret Recovery Phrase",
+    "textarea_placeholder": "Add a space between each word and make sure no one is watching",
     "description": "Geben Sie die geheime Wiederherstellungsphrase Ihrer Wallets ein. Sie können jede geheime Wiederherstellungsphrase von Ethereum, Solana oder Bitcoin importieren.",
     "subtitle": "Fügen Sie Ihre geheime Wiederherstellungsphrase ein",
     "cta_text": "Fortfahren",
@@ -3782,6 +3828,8 @@
     "error_multiple_srp_word_error_3": " sind falsch oder falsch geschrieben.",
     "error_invalid_srp": "Geheime Wiederherstellungsphrase ungültig",
     "error_duplicate_srp": "Diese geheime Wiederherstellungsphrase wurde bereits importiert.",
+    "invalid_qr_code_title": "Invalid QR Code",
+    "invalid_qr_code_message": "The QR code does not contain a valid Secret Recovery Phrase",
     "success_1": "Wallet",
     "success_2": "importiert"
   },
@@ -4243,13 +4291,13 @@
   },
   "experimental_settings": {
     "wallet_connect_dapps": "WalletConnect-Sitzungen",
-    "wallet_connect_dapps_desc": "Liste aktiver WalletConnect-Sitzungen anzeigen",
+    "wallet_connect_dapps_desc": "View the list of active WalletConnect sessions.",
     "wallet_connect_dapps_cta": "Sitzungen anzeigen",
     "network_not_supported": "Aktuelles Netzwerk nicht unterstützt",
     "select_provider": "Wählen Sie Ihren bevorzugten Anbieter",
     "switch_network": "Bitte wechseln Sie auf Mainnet oder Sepolia.",
     "card_title": "Schaltfläche MetaMask-Karte immer anzeigen",
-    "card_desc": "MetaMask-Karte ist nur für Einwohner ausgewählter Länder verfügbar"
+    "card_desc": "MetaMask Card is only available to residents of select countries."
   },
   "walletconnect_sessions": {
     "no_active_sessions": "Sie haben keine aktiven Sitzungen",
@@ -4399,6 +4447,13 @@
     "order_status_completed": "Abgeschlossen",
     "order_status_failed": "Fehlgeschlagen",
     "order_status_cancelled": "Storniert",
+    "webview_no_url_provided": "No URL was provided to continue",
+    "webview_error_no_address_provided": "No wallet address was provided to continue",
+    "settings_modal": {
+      "title": "Settings",
+      "use_new_buy_experience": "Use new buy experience",
+      "use_new_buy_experience_description": "Try new native on ramp"
+    },
     "onboarding": {
       "what_to_expect": "Was Sie erwartet",
       "quotes": "Unsere Krypto-Kauffunktion sammelt Angebote von integrierten Händlern und stellt Ihnen Angebote aus diesen Quellen zur Verfügung, damit Sie Krypto direkt und ohne Wartezeit in Ihre Wallet bekommen.",
@@ -5291,6 +5346,7 @@
     "service_interruption_banner": {
       "maintenance_message": "Wir sind wegen Wartungsarbeiten nicht erreichbar. Wir sind bald wieder online!"
     },
+    "supply": "Supply",
     "deposit": "Einzahlung",
     "approve": "Genehmigen",
     "approval": "Genehmigung",
@@ -5775,13 +5831,13 @@
     "apply": "Anwenden",
     "slippage": "Slippage",
     "slippage_info": "Wenn der Preis sich zwischen dem Zeitpunkt Ihrer Order und deren Bestätigung ändert, bezeichnet man dies als „Slippage“. Ihr Swap wird automatisch storniert, wenn diese Slippage die von Ihnen hier festgelegte Toleranz überschreitet.",
-    "network_fee": "Netzwerkgebühr",
+    "network_fee": "Network fee",
     "included": "Beinhaltet",
     "estimated_time": "Geschätzte Zeit",
     "quote": "Angebot",
     "rate": "Rate",
     "quote_details": "Details der Preisangabe",
-    "price_impact": "Preisauswirkungen",
+    "price_impact": "Price impact",
     "time": "Zeit",
     "quote_info_content": "Der beste Gebühr, die wir bei Anbietern gefunden haben, einschließlich Anbietergebühren und einer MetaMask-Gebühr von 0,875 %.",
     "quote_info_title": "Rate",
@@ -5825,7 +5881,7 @@
     "approval_needed": "Genehmigt den Token für den Swap.",
     "approval_tooltip_title": "Exakten Zugriff gewähren",
     "approval_tooltip_content": "Sie gewähren Zugriff auf den angegebenen Betrag in Höhe von {{amount}} {{symbol}}. Der Kontrakt hat keinen Zugriff auf weitere Gelder.",
-    "minimum_received": "Empfangenes Minimum",
+    "minimum_received": "Minimum received",
     "minimum_received_tooltip_title": "Empfangenes Minimum",
     "minimum_received_tooltip_content": "Der Mindestbetrag, den Sie erhalten, wenn sich der Kurs während der Bearbeitung Ihrer Transaktion entsprechend Ihrer Slippage-Toleranz ändert. Dies ist eine Schätzung unserer Liquiditätsanbieter. Die Endbeträge können abweichen.",
     "verified_token": "Verifizierter Token",
@@ -6181,6 +6237,12 @@
         "verify_button": "Verifizierung starten",
         "start_verification_error": "Fehler beim Starten der Verifizierung. Bitte versuchen Sie es in Kürze erneut."
       },
+      "kyc_webview": {
+        "close_confirmation_title": "Exit verification?",
+        "close_confirmation_message": "If you exit now, you'll need to restart the identity verification process. Are you sure you want to exit?",
+        "cancel_button": "Stay",
+        "close_button": "Exit"
+      },
       "validating_kyc": {
         "title": "Validierung Ihres KYC ...",
         "timeout_button": "Verifizierung erneut starten"
@@ -6276,6 +6338,7 @@
       "logout_confirmation_message": "Möchten Sie sich wirklich von Ihrem MetaMask-Karte-Konto abmelden?",
       "logout_confirmation_cancel": "Stornieren",
       "logout_confirmation_confirm": "Abmelden",
+      "enable_card_error": "Failed to enable card. Please try again later.",
       "warnings": {
         "close_spending_limit": {
           "title": "Sie sind Ihrem Ausgabenlimit nahe",
@@ -6396,7 +6459,8 @@
     "report_submitted": "Fehlerbericht wurde übermittelt."
   },
   "pay_with_modal": {
-    "title": "Zahlungsmethode auswählen"
+    "title": "Zahlungsmethode auswählen",
+    "no_gas": "No native balance for gas"
   },
   "connection_removed_modal": {
     "title": "Verbindungen entfernt",
@@ -6609,10 +6673,10 @@
       "supported_networks": "Unterstützte Netzwerke",
       "swap": {
         "title": "Swap",
-        "description": "80 Punkte pro 100 $",
+        "description": "8 points per $10",
         "sheet": {
           "title": "Tokens tauschen",
-          "points": "80 Punkte pro 100 $",
+          "points": "8 points per $10",
           "description": "Swappen Sie Token in unterstützten Netzwerken und verdienen Sie Punkte für jeden gehandelten Dollar.",
           "cta_label": "Swap beginnen"
         }
@@ -6623,7 +6687,7 @@
         "sheet": {
           "title": "Perps handeln",
           "points": "10 Punkte pro $ 100 Orderwert",
-          "description": "Verdienen Sie Punkte bei jedem Trade, einschließlich Eröffnungen und Schließungen, Stop-Loss- und Take-Profit-Orders sowie Margin-Anpassungen. Der Orderwert richtet sich nach der Größe mit Hebelwirkung.",
+          "description": "Earn points on every trade, including opens and closes, stop loss and take profit orders, and margin adjustments. Order value is based on the size with leverage. If you have a fee discount, points will be discounted too.",
           "cta_label": "Einen Trade starten"
         }
       },
@@ -6632,7 +6696,7 @@
         "description": "10 Punkte pro 50 Punkte von Freunden",
         "sheet": {
           "title": "Einem Freund empfehlen",
-          "points": "20 Punkte pro 100",
+          "points": "10 points per 50",
           "cta_label": "Einem Freund empfehlen"
         }
       },
@@ -6642,7 +6706,7 @@
         "sheet": {
           "title": "Treuebonus",
           "points": "250 Punkte pro 1250 $",
-          "description": "Fügen Sie Konten mit vergangenen Swaps oder Bridges in MetaMask hinzu, um Treueboni zu verdienen. Für jedes teilnahmeberechtigte Konto werden Punkte in 250er-Schritten bis zu einer Gesamtzahl von 50.000 freigeschaltet. Die Boni erscheinen bereits kurz nach dem Hinzufügen eines Kontos.",
+          "description": "Add accounts with past MetaMask in-wallet swaps or bridges to earn loyalty bonuses. Each eligible account unlocks points in increments of 250, up to a total of 50,000. Bonuses appear shortly after you add an account.",
           "cta_label": "Konten hinzufügen"
         }
       },
@@ -6674,6 +6738,8 @@
       "link_account": "Konto hinzufügen",
       "tracked": "Verfolgt",
       "untracked": "Nicht verfolgt",
+      "unsupported": "Unsupported",
+      "tracked_count": "{{optedIn}}/{{total}} tracked",
       "link_account_success": "{{accountName}} erfolgreich hinzugefügt",
       "link_account_error": "Das Hinzufügen einer oder mehrerer Adressen für {{accountName}} ist fehlgeschlagen"
     },
@@ -6751,5 +6817,9 @@
     "update_rpc": "RPC aktualisieren",
     "check_network_connectivity": "Überprüfen Sie Ihre Netzwerkverbindung.",
     "check_network_connectivity_or": "Überprüfen Sie Ihre Netzwerkverbindung oder"
+  },
+  "trending": {
+    "title": "Trending",
+    "coming_soon": "Trending tokens coming soon"
   }
 }
